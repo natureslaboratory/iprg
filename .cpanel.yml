@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/confenceiprg/public_html/
+    - /bin/cp -R * $DEPLOYPATH
