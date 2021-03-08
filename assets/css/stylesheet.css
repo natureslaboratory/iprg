@@ -177,6 +177,7 @@ input[type=text],input[type=email],input[type=password],textarea{
 	border:none;
 	border-bottom:1px solid #ccc;
 	border-radius: 3px;
+	background:#f1f2f2;
 }
 
 label{
@@ -251,7 +252,7 @@ header{
 
 header .restrict{
 	display:grid;
-	grid-template-columns: 300px auto 240px 180px;
+	grid-template-columns: 300px auto;
 	grid-column-gap: 2rem;
 	padding: 1rem 1rem 1rem 1rem;
 }
