@@ -1,5 +1,5 @@
-*
-!/assets/*
-!/assets/images/
-!/perch/*
+/*
+/*/
+!/assets/
+!/assets/
 !/perch/templates/
