@@ -177,6 +177,7 @@ input[type=text],input[type=email],input[type=password],textarea{
 	border:none;
 	border-bottom:1px solid #ccc;
 	border-radius: 3px;
+	background:#f1f2f2;
 }
 
 label{
