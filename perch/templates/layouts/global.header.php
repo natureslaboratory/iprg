@@ -31,7 +31,7 @@
 <body>
     <header>
 	    <div class="restrict">
-		    <p class="logo"><a href="/">Website</a></p>
+		    <p class="logo"><a href="/"><img src="/assets/images/iprg-logo.svg" alt="IPRG Logo" /></a></p>
 			<nav>
 			<?php 
 				perch_pages_navigation(); 

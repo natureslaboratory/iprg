@@ -49,18 +49,18 @@ table {
 
 /* GLOBAL COLOURS */
 :root{
-	--primary:#3F8C7E;
-	--secondary:#5DA67C;
-	--bright:#9DBF54;
-	--pale:#A0DBF3;
-	--grey:#DBDFE3;
+	--primary:#000000;
+	--secondary:#bf215a;
+	--bright:#95c11f;
+	--pale:#e5edca;
+	--grey:#d5d8ce;
 }
 
 /* BODY STYLING */
 body,html{
 	font-family: 'Nunito', sans-serif;
 	line-height:1.3;
-	background:#f1f2f2;
+	background:#fff;
 }
 
 *{
@@ -251,9 +251,9 @@ header{
 
 header .restrict{
 	display:grid;
-	grid-template-columns: 100px auto 240px 180px;
+	grid-template-columns: 300px auto 240px 180px;
 	grid-column-gap: 2rem;
-	padding: 3rem 1rem 3rem 1rem;
+	padding: 1rem 1rem 1rem 1rem;
 }
 
 header .logo{
@@ -277,6 +277,7 @@ header .restrict nav ul{
 header nav ul li{
 	display:inline-block;
 	margin-right:1.4rem;
+	line-height:140px;
 }
 
 header ul.social{
@@ -384,7 +385,6 @@ footer .restrict{
 }
 
 footer .copyright{
-	border-top:1px solid var(--grey);
 	padding:4rem 0;
 	margin-top:4rem;
 	grid-column: 1 / 6;
