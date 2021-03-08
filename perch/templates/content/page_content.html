@@ -53,7 +53,10 @@
 	    	<div class="restrict">	     
 				<perch:content type="textarea" id="textarea" label="Text Field" editor="redactor" html />
 			    <perch:form id="abstract" method="post" app="perch_forms">
-			        <label for="name">Enter Your Name</label><perch:input type="text" id="name" required label="Name" placeholder="Your Name" />
+					<label for="name">Enter Your Name</label><perch:input type="text" id="name" required label="Name" placeholder="Your Name" />
+					<label for="email">Enter Your Email</label><perch:input type="email" id="email" required label="Email" placeholder="you@company.com" />
+					<label for="phone">Enter Your Phone Number</label><perch:input type="text" id="phone" required label="Phone" placeholder="01234567890" />
+					<label for="website">Enter Your Website Address</label><perch:input type="text" id="website" required label="Website" placeholder="www.yourwebsite.org" />
 			        <label for="organisation">Enter Your Organisation</label><perch:input type="text" id="organisation" required label="Organisation" placeholder="Your Organisation" />
 					<label for="title">Enter Talk Title</label><perch:input type="text" id="title" required label="Title" placeholder="Talk Title" />
 					<label for="description">Enter Talk Description</label><perch:input type="textarea" id="description" required label="Description" placeholder="Talk Description" />
