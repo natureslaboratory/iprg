@@ -2,4 +2,10 @@
 /*/
 !/assets/
 !/assets/
-!/perch/templates/
+
+!perch
+
+perch/*
+
+!perch/templates/
+!perch/templates/**
