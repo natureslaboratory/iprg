@@ -252,7 +252,7 @@ header{
 
 header .restrict{
 	display:grid;
-	grid-template-columns: 300px auto 240px 180px;
+	grid-template-columns: 300px auto;
 	grid-column-gap: 2rem;
 	padding: 1rem 1rem 1rem 1rem;
 }
