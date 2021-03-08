@@ -1,4 +1,6 @@
 *
+
 !/assets/*
+!/assets/images/
 !/perch/*
-!/perch/templates/*
+!/perch/templates/
