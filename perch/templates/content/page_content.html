@@ -63,14 +63,13 @@
 						<label for="description">Enter Your Talk Description</label><perch:input type="textarea" id="description" required label="Description" placeholder="Talk Description" class="countWords cw-200" />
 					</div>
 					<label for="image">Upload A Great Picture</label><perch:input type="image" id="image" label="Image" />
-					<div id="count">0</div>
 			        <perch:input type="submit" id="submit" value="Send" />
 					<perch:success>
 						<p class="success"><perch:content id="success" type="text" label="Thank you message" /></p>
 					</perch:success>
 				</perch:form>	    
 				<script>
-					
+
 				// Helper functions
 
 				const getMaxWordCount = (element) => {
