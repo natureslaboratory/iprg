@@ -32,7 +32,7 @@
     <header>
 	    <div class="restrict">
 		    <p class="logo"><a href="/"><?php perch_content('Logo'); ?></a></p>
-			<nav>
+			<nav class="navigation">
 			<?php 
 				perch_pages_navigation(); 
 			?>
