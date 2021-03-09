@@ -23,7 +23,6 @@ const handleResize = (e) => {
         window.innerWidth ||
         document.documentElement.clientWidth ||
         document.getElementsByTagName('body')[0].clientWidth;
-    console.log(innerWidth);
 
     let navBox = newNav.getBoundingClientRect();
     if (navBox.right > (innerWidth - 50)) {
