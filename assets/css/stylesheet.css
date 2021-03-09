@@ -326,7 +326,7 @@ header ul.languages li a{
 		display:none;
 	}
 	header .restrict{
-		grid-template-columns: 100px auto 160px;	
+		/* grid-template-columns: 100px auto 160px;	 */
 	}
 }
 
@@ -989,6 +989,7 @@ aside img{
 	grid-column: auto;
 	height: 140px;
 	align-items: center;
+	justify-content: end;
 }
 
 .navigation li {

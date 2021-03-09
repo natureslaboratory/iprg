@@ -77,6 +77,7 @@ const createHamburger = (navigation) => {
 
 const originalNav = onLoadStoreNav();
 
+handleResize();
 setTimeout(() => handleResize(), 5);
 
 
