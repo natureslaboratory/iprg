@@ -12,13 +12,21 @@ const handleResize = (e) => {
     for (let index = 0; index < parent.children.length; index++) {
         parent.children[index].remove();
     }
-    
+
     // var newNav = originalNav.cloneNode(true);
-    
+
     parent.appendChild(newNav);
-    
+
+    innerWidth = 0;
+    innerWidth = window.innerWidth && document.documentElement.clientWidth ?
+        Math.min(window.innerWidth, document.documentElement.clientWidth) :
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.getElementsByTagName('body')[0].clientWidth;
+    console.log(innerWidth);
+
     let navBox = newNav.getBoundingClientRect();
-    if (navBox.right > window.innerWidth) {
+    if (navBox.right > (innerWidth - 50)) {
         if (!hamburgerExists(newNav)) {
             createHamburger(newNav);
         }
@@ -34,7 +42,7 @@ const handleResize = (e) => {
 
     }
     // originalNav = newNav;
-    
+
     // hamburgerButton = document.getElementById("hamburgerButton");
     // if (hamburgerButton) {
     //     hamburgerButton.addEventListener('click')
