@@ -1177,13 +1177,54 @@ form {
 	border: 1px solid red;
 }
 
-.wrap > .restrict {
-	max-width: 800px;
+.align-container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	width: 100%;
+}
+
+.align-inner {
+	max-width: 950px;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 30px;
+	padding: 30px;
+}
+
+.align-inner > img {
+	float: none;
+	margin: 0;
+	grid-area: img;
+}
+
+.align-inner > div {
+	grid-area: text;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.align-inner > div > h1,h2,h3,h4,h5,h6,p {
+	margin: 0;
+}
+
+.align-inner > div > h2 {
+	margin-top: -10px;
+}
+
+.left-align-inner {
+	grid-template-areas: "img text";
+}
+
+.right-align-inner {
+	grid-template-areas: "text img";
+	text-align: right;
 }
 
 .align-outer {
 	padding: 0 50px;
-	max-width: 1200px;
+	max-width: 1280px;
 	margin: 0 auto;
 	float: none;
 }
