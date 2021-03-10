@@ -20,6 +20,11 @@ const handleResize = (e) => {
         while (areChildrenWrapped(newNav)) {
             moveLinkToHamburger(newNav, hamburger);
         }
+
+        // The menu looks wierd with one item
+        if (hamburger.children.length == 1) {
+            moveLinkToHamburger(newNav, hamburger);
+        }
     }
 }
 
