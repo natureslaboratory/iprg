@@ -1014,4 +1014,31 @@ aside img{
 
 /* End Nav */
 
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+.form-section input {
+	max-width: none;
+}
+
+.countWords {
+	margin: 0;
+}
+
+.countWords > div > input, textarea {
+	/* width: 100%; */
+	max-width: none;
+}
+
+.countWords + p {
+	font-size: 1rem;
+	text-align: right;
+	margin-bottom: -5px;
+}
+
 
