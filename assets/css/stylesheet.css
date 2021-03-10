@@ -964,8 +964,10 @@ aside img{
 	text-align: right;
 	padding: 10px;
 	right: 0px;
+	top: 35px;
 	opacity: 0;
 	pointer-events: none;
+	transition: 150ms;
 }
 
 #hamburger.show {
@@ -981,6 +983,12 @@ aside img{
 	position: relative;
 	top: 1px;
 	cursor: pointer;
+	background-color: white;
+	color: black;
+	text-shadow: none;
+	margin: 0px;
+	padding: 0px;
+	min-width: 16px;
 }
 
 .navigation {
@@ -988,12 +996,12 @@ aside img{
 	grid-row: auto;
 	grid-column: auto;
 	height: 140px;
-	align-items: center;
-	justify-content: end;
+	justify-content: flex-end;
 }
 
 .navigation li {
 	line-height: normal;
 	font-size: 1.2rem;
 }
+
 

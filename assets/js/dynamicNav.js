@@ -7,47 +7,49 @@ const onLoadStoreNav = () => {
 const handleResize = (e) => {
     let oldNav = document.getElementById("dynamic_nav");
     let parent = oldNav.parentElement;
-    let newNav = originalNav.cloneNode(true);
-
-    for (let index = 0; index < parent.children.length; index++) {
-        parent.children[index].remove();
-    }
-
-    // var newNav = originalNav.cloneNode(true);
-
+    let newNav = buildNav(navObj);
     parent.appendChild(newNav);
 
-    innerWidth = 0;
-    innerWidth = window.innerWidth && document.documentElement.clientWidth ?
+    for (let index = 0; index < parent.children.length; index++) {
+        if (parent.children[index] != newNav) {
+            parent.children[index].remove();
+        }
+    }
+
+    
+
+    let navBox = newNav.getBoundingClientRect();
+
+    console.log(`Before - NavBox Right Edge: ${navBox.right} Width Of Page: ${document.documentElement.clientWidth}`)
+    if (navBox.right > document.documentElement.clientWidth) {
+        let hamburger = createHamburger(newNav);
+
+        while (newNav.getBoundingClientRect().right > document.documentElement.clientWidth) {
+            let lastLink = newNav.lastChild.previousSibling;
+
+            let newHamburgerLink = lastLink.cloneNode(true);
+            hamburger.insertBefore(newHamburgerLink, hamburger.firstChild);
+            lastLink.remove();
+            //console.log(`NavBox Right Edge: ${navBox.right} Width Of Page: ${document.documentElement.clientWidth}`)
+        }
+        console.log(`After - NavBox Right Edge: ${newNav.getBoundingClientRect().right} Width Of Page: ${document.documentElement.clientWidth}`)
+
+    }
+}
+
+const calculateInnerWidth = () => {
+    return window.innerWidth && document.documentElement.clientWidth ?
         Math.min(window.innerWidth, document.documentElement.clientWidth) :
         window.innerWidth ||
         document.documentElement.clientWidth ||
         document.getElementsByTagName('body')[0].clientWidth;
+}
 
-    let navBox = newNav.getBoundingClientRect();
-    if (navBox.right > (innerWidth - 50)) {
-        if (!hamburgerExists(newNav)) {
-            createHamburger(newNav);
-        }
-        let hamburger = document.getElementById('hamburger');
-
-        while (newNav.getBoundingClientRect().right > window.innerWidth) {
-            let lastChild = newNav.lastChild.previousSibling;
-
-            let newHamburger = lastChild.cloneNode(true);
-            hamburger.insertBefore(newHamburger, hamburger.firstChild);
-            lastChild.remove();
-        }
-
-    }
-    // originalNav = newNav;
-
-    // hamburgerButton = document.getElementById("hamburgerButton");
-    // if (hamburgerButton) {
-    //     hamburgerButton.addEventListener('click')
-    // }
-
-
+const moveLinkToHamburger = (nav, hamburger) => {
+    let lastLink = nav.lastChild.previousSibling;
+    let newHamburgerLink = lastLink.cloneNode(true);
+    hamburger.insertBefore(newHamburgerLink, hamburger.firstChild);
+    lastLink.remove();
 }
 
 const hamburgerExists = (nav) => {
@@ -57,7 +59,7 @@ const hamburgerExists = (nav) => {
 const createHamburger = (navigation) => {
     let hamburger = document.createElement('li');
 
-    let hamburgerButton = document.createElement('div');
+    let hamburgerButton = document.createElement('button');
     hamburgerButton.id = "hamburgerButton";
 
     let hamburgerIcon = document.createElement('i')
@@ -80,12 +82,92 @@ const createHamburger = (navigation) => {
     hamburger.appendChild(hamburgerButton);
     hamburger.appendChild(hamburgerList);
     navigation.appendChild(hamburger);
+    return hamburgerList;
 }
 
-const originalNav = onLoadStoreNav();
+// Store the original nav to revert back to on each resize before calculating new nav.
+let originalNav = null;
+setTimeout(() => {
+    originalNav = onLoadStoreNav();
+}, 5)
 
-handleResize();
-setTimeout(() => handleResize(), 5);
+const getClassList = (elem) => {
+    let classList = elem.classList;
+    let classArray = [];
+    for (let i = 0; i < classList.length; i++) {
+        classArray = [...classArray, classList[i]];
+    }
+    return classArray
+}
+
+const getChildren = (elem) => {
+    let children = elem.children;
+    let childArray = [];
+    for (let i = 0; i < children.length; i++) {
+        childArray = [...childArray, children[i]];
+    }
+    return childArray
+}
+
+const buildNavObject = (elem) => {
+    if (!(elem.children.length > 0)) {
+        return {
+            tagName: elem.tagName,
+            id: elem.id,
+            classList: getClassList(elem),
+            href: elem.href,
+            innerHTML: elem.innerHTML,
+            children: []
+        }
+    }
+
+    let elemObj = {
+        tagName: elem.tagName,
+        id: elem.id,
+        classList: getClassList(elem),
+        children: []
+    }
+
+    let children = getChildren(elem);
+    for (let i = 0; i < children.length; i++) {
+        elemObj.children = [...elemObj.children, buildNavObject(children[i])]
+    }
+
+    return elemObj;
+}
+
+const buildNav = (navObj) => {
+    let element = document.createElement(navObj.tagName);
+    if (navObj.innerHTML) {
+        element.innerHTML = navObj.innerHTML;
+    }
+    if (navObj.href) {
+        element.href = navObj.href;
+    }
+    element.id = navObj.id;
+    if (navObj.classList.length > 0) {
+        for (let i = 0; i < navObj.classList.length; i++) {
+            element.classList.add(navObj.classList[i])
+        }
+    }
+
+    if (!navObj.children.length > 0) {
+        return element;
+    }
+
+    for (let i = 0; i < navObj.children.length; i++) {
+        element.appendChild(buildNav(navObj.children[i]));
+    }
+    return element;
+}
+
+let navObj = buildNavObject(document.getElementById('dynamic_nav'));
+
+
+
+// called twice since there's a slight problem on the first calculation
+setTimeout(() => handleResize(), 10);
+setTimeout(() => handleResize(), 15);
 
 
 window.addEventListener('resize', handleResize);
