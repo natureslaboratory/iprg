@@ -77,8 +77,14 @@
 					<div class="form-section">
 						<label for="speaker-bio">Enter A Brief Bio</label><perch:input type="textarea" id="speaker-bio" required label="Bio" placeholder="Speaker Bio" class="countWords cw-100" />
 					</div>
-					<div class="form-section">
-						<label for="image">Upload A Profile Picture</label><perch:input type="image" id="image" label="Image" />
+					<div class="form-section image-upload-section">
+						<label for="image">Upload A Profile Picture</label><perch:input type="image" id="image" label="Image" class="image-upload" />
+						<button id="image-button">Choose Image</button>
+						<div id="preview-div" class="hide">
+							<img id="image-to-upload" />
+							<div id="image-overlay" class="hide"></div>
+							<button id="delete-button" class="hide">Delete</button>
+						</div>
 					</div>
 					<div class="form-section">
 						<perch:input type="submit" id="submit" value="Send" class="form-button" />
