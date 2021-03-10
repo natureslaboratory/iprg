@@ -34,7 +34,30 @@
 		    <p class="logo"><a href="/"><?php perch_content('Logo'); ?></a></p>
 			<nav class="navigation">
 			<?php 
-				perch_pages_navigation(); 
+				$navigationArray = perch_pages_navigation(array(
+					'skip-template' => true
+				)); 
+				$navigation = "<ul>";
+				$hamburger = "<ul>";
+				$links = "";
+				foreach ($navigationArray as $key => $value) {
+					$newLink = "<li><a href={$value["pagePath"]}>{$value["pageTitle"]}</a></li>";
+					$links .= $newLink;
+				}
+				
+				$hamburger .= $links . "</ul>";
+				$navigation .= $links . "</ul>
+										<div class='hamburgerWrapper'>
+											<button id='hamburgerButton'>
+												<i class='fas fa-bars'>
+												</i>
+											</button>
+											<ul id='hamburger'>
+												{$links}
+											</ul>
+										</div>";
+				echo $navigation;
+				
 			?>
 			</nav>
 	    </div>

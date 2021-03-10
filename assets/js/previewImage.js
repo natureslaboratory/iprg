@@ -47,41 +47,51 @@ const showImageHideChoose = () => {
 
 let element = document.getElementsByClassName("image-upload")[0];
 
-element.addEventListener('change', (e) => previewImage(e, document.getElementById("image-to-upload")));
+let imageToUpload = document.getElementById("image-to-upload");
+if (imageToUpload) {
+    element.addEventListener('change', (e) => previewImage(e, document.getElementById("image-to-upload")));
+}
 
 let addButton = document.getElementById("image-button");
-addButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    document.getElementsByClassName("image-upload")[0].click();
-})
+if (addButton) {
+    addButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementsByClassName("image-upload")[0].click();
+    })
+}
 
 let deleteButton = document.getElementById("delete-button");
-deleteButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    let imageUpload = document.getElementsByClassName("image-upload")[0];
-    imageUpload.value = null;
-    document.getElementById("image-button").classList.remove("hide");
-    document.getElementById("preview-div").classList.add("hide");
-})
+if (deleteButton) {
+    deleteButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        let imageUpload = document.getElementsByClassName("image-upload")[0];
+        imageUpload.value = null;
+        document.getElementById("image-button").classList.remove("hide");
+        document.getElementById("preview-div").classList.add("hide");
+    })
+}
 
 // To show delete option
 
-document.getElementById("preview-div").addEventListener('mouseover', (e) => {
-    overlayOn();
-})
+let previewDiv = document.getElementById("preview-div");
+if (previewDiv) {
+    previewDiv.addEventListener('mouseover', (e) => {
+        overlayOn();
+    })
 
-document.getElementById("preview-div").addEventListener('mouseleave', (e) => {
-    overlayOff();
-})
-
-// For mobile users
-
-document.getElementById("preview-div").addEventListener('touchstart', (e) => {
-    overlayOn();
-}, {passive: true})
-
-document.addEventListener('touchstart', (e) => {
-    if (!hasParent(e.target, document.getElementById("preview-div"))) {
+    previewDiv.addEventListener('mouseleave', (e) => {
         overlayOff();
-    }
-})
+    })
+    // For mobile users
+    
+    document.getElementById("preview-div").addEventListener('touchstart', (e) => {
+        overlayOn();
+    }, {passive: true})
+    
+    document.addEventListener('touchstart', (e) => {
+        if (!hasParent(e.target, document.getElementById("preview-div"))) {
+            overlayOff();
+        }
+    })
+}
+

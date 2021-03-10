@@ -1001,7 +1001,7 @@ aside img{
 	grid-column: auto;
 	height: 140px;
 	justify-content: flex-end;
-	opacity: 0;
+	opacity: 1;
 }
 
 .navigation.show {
@@ -1011,6 +1011,56 @@ aside img{
 .navigation li {
 	line-height: normal;
 	font-size: 1.2rem;
+}
+
+#hamburger > li {
+	display: none;
+}
+
+@media screen and (min-width: 1241px) {
+	#hamburgerButton {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1241px) {
+	#hamburger li:nth-last-child(-n+2) {
+		display: block;
+	}
+
+	/* .navigation li:nth-last-child(-n+2) {
+		display: none;
+	} */
+}
+
+@media screen and (max-width: 1150px) {
+	#hamburger li:nth-last-child(-n+2) {
+		display: block;
+	}
+
+	.navigation li:nth-last-child(-n+2) {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	#hamburger li:nth-last-child(-n+4) {
+		display: block;
+	}
+
+	.navigation li:nth-last-child(-n+4) {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#hamburger li:nth-last-child(-n+5) {
+		display: block;
+	}
+
+	.navigation li:nth-last-child(-n+5) {
+		display: none;
+	}
 }
 
 /* End Nav */
