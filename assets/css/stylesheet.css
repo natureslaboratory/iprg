@@ -1029,9 +1029,9 @@ aside img{
 		display: block;
 	}
 
-	/* .navigation li:nth-last-child(-n+2) {
+	.navigation li:nth-last-child(-n+2) {
 		display: none;
-	} */
+	}
 }
 
 @media screen and (max-width: 1150px) {
@@ -1181,13 +1181,42 @@ form {
 	max-width: 800px;
 }
 
+.align-outer {
+	padding: 0 50px;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+}
+
 .right-align-inner {
 	margin-left: auto;
-	margin-right: 50px;
+	margin-right: 0;
 }
 
 .left-align-inner {
 	margin-right: auto;
-	margin-left: 50px;
+	margin-left: 0;
+}
+
+@media screen and (max-width: 600px) {
+	.align-outer {
+		padding: 0 30px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.align-outer {
+		padding: 0 15px;
+	}
+}
+
+@media screen and (max-width:480px){
+	.left-align img,.right-align img{
+		width: 100%;
+		max-width:100%;
+		margin: 0;
+		display:block;
+		float:none;
+	}
 }
 
