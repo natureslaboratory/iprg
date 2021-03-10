@@ -1186,8 +1186,7 @@ form {
 
 .align-inner {
 	max-width: 950px;
-	display: grid;
-	grid-template-columns: auto auto;
+	display: flex;
 	gap: 30px;
 	padding: 30px;
 }
@@ -1214,12 +1213,11 @@ form {
 }
 
 .left-align-inner {
-	grid-template-areas: "img text";
 	justify-self: start;
 }
 
 .right-align-inner {
-	grid-template-areas: "text img";
+	flex-direction: row-reverse;
 	text-align: right;
 }
 
@@ -1241,32 +1239,21 @@ form {
 }
 
 @media screen and (max-width: 600px) {
-	.align-outer {
-		margin: 0 30px;
-	}
 
-	.left-align img,.right-align img{
+	/* .left-align img,.right-align img{
 		width: 100%;
 		max-width:100%;
 		margin: 0;
 		display:block;
 		float:none;
-	}
+	} */
 
 	.align-inner {
-		grid-template-columns: auto;
-		grid-template-rows: auto auto;
-		grid-template-areas: "img" "text";
+		flex-direction: column;
 	}
 
 	.right-align-inner {
 		text-align: left;
-	}
-}
-
-@media screen and (max-width: 400px) {
-	.align-outer {
-		margin: 0 15px;
 	}
 }
 
