@@ -1,10 +1,6 @@
-
-const onLoadStoreNav = () => {
-    nav = document.getElementById("dynamic_nav");
-    return nav.cloneNode(true);
-}
-
 const handleResize = (e) => {
+
+    // Grabs the current nav, and replaces it with the original nav
     let oldNav = document.getElementById("dynamic_nav");
     let parent = oldNav.parentElement;
     let newNav = buildNav(navObj);
@@ -16,33 +12,15 @@ const handleResize = (e) => {
         }
     }
 
-    
-
     let navBox = newNav.getBoundingClientRect();
 
-    console.log(`Before - NavBox Right Edge: ${navBox.right} Width Of Page: ${document.documentElement.clientWidth}`)
     if (navBox.right > document.documentElement.clientWidth) {
         let hamburger = createHamburger(newNav);
 
         while (newNav.getBoundingClientRect().right > document.documentElement.clientWidth) {
-            let lastLink = newNav.lastChild.previousSibling;
-
-            let newHamburgerLink = lastLink.cloneNode(true);
-            hamburger.insertBefore(newHamburgerLink, hamburger.firstChild);
-            lastLink.remove();
-            //console.log(`NavBox Right Edge: ${navBox.right} Width Of Page: ${document.documentElement.clientWidth}`)
+            moveLinkToHamburger(newNav, hamburger);
         }
-        console.log(`After - NavBox Right Edge: ${newNav.getBoundingClientRect().right} Width Of Page: ${document.documentElement.clientWidth}`)
-
     }
-}
-
-const calculateInnerWidth = () => {
-    return window.innerWidth && document.documentElement.clientWidth ?
-        Math.min(window.innerWidth, document.documentElement.clientWidth) :
-        window.innerWidth ||
-        document.documentElement.clientWidth ||
-        document.getElementsByTagName('body')[0].clientWidth;
 }
 
 const moveLinkToHamburger = (nav, hamburger) => {
@@ -52,16 +30,16 @@ const moveLinkToHamburger = (nav, hamburger) => {
     lastLink.remove();
 }
 
-const hamburgerExists = (nav) => {
-    return document.getElementById('hamburger');
-}
-
 const createHamburger = (navigation) => {
+    // element that's added to the end of the current nav list
     let hamburger = document.createElement('li');
+    hamburger.classList.add("hamburgerWrapper");
 
+    // create button
     let hamburgerButton = document.createElement('button');
     hamburgerButton.id = "hamburgerButton";
 
+    // create and append icon to button
     let hamburgerIcon = document.createElement('i')
     hamburgerIcon.classList.add("fas");
     hamburgerIcon.classList.add("fa-bars");
@@ -76,20 +54,18 @@ const createHamburger = (navigation) => {
         }
     })
 
+    // the actual hamburger menu
     let hamburgerList = document.createElement('ul');
     hamburgerList.id = "hamburger";
-    hamburger.classList.add("hamburgerWrapper");
+
     hamburger.appendChild(hamburgerButton);
     hamburger.appendChild(hamburgerList);
+    
     navigation.appendChild(hamburger);
     return hamburgerList;
 }
 
-// Store the original nav to revert back to on each resize before calculating new nav.
-let originalNav = null;
-setTimeout(() => {
-    originalNav = onLoadStoreNav();
-}, 5)
+// Helper functions
 
 const getClassList = (elem) => {
     let classList = elem.classList;
@@ -108,6 +84,10 @@ const getChildren = (elem) => {
     }
     return childArray
 }
+
+// End of Helper Functions
+
+// Recursive function to construct an object full of element details.
 
 const buildNavObject = (elem) => {
     if (!(elem.children.length > 0)) {
@@ -136,6 +116,8 @@ const buildNavObject = (elem) => {
     return elemObj;
 }
 
+// Recursive function to build the original nav element
+
 const buildNav = (navObj) => {
     let element = document.createElement(navObj.tagName);
     if (navObj.innerHTML) {
@@ -163,12 +145,8 @@ const buildNav = (navObj) => {
 
 let navObj = buildNavObject(document.getElementById('dynamic_nav'));
 
-
-
-// called twice since there's a slight problem on the first calculation
-setTimeout(() => handleResize(), 10);
-setTimeout(() => handleResize(), 15);
-
+// initial nav calulation
+handleResize();
 
 window.addEventListener('resize', handleResize);
 
