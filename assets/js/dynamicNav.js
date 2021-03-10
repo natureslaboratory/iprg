@@ -26,6 +26,8 @@ const handleResize = (e) => {
             moveLinkToHamburger(newNav, hamburger);
         }
     }
+
+    setTimeout(() => showNav(), 30);
 }
 
 const moveLinkToHamburger = (nav, hamburger) => {
@@ -112,6 +114,16 @@ const areChildrenWrapped = (nav) => {
     return false;
 }
 
+const showNav = () => {
+    let nav = document.getElementsByClassName('navigation');
+    for (let i = 0; i < nav.length; i++) {
+        const element = nav[i];
+        if (!element.classList.contains("show")) {
+            element.classList.add("show");
+        }
+    }
+}
+
 // End of Helper Functions
 
 // Recursive function to construct an object full of element details.
@@ -171,9 +183,46 @@ const buildNav = (navObj) => {
 }
 
 let navObj = buildNavObject(document.getElementById('dynamic_nav'));
+navObj.classList = [...navObj.classList, "show"];
+
 
 // initial nav calulation
 handleResize();
 
+//setTimeout(() => showNav(), 30);
 window.addEventListener('resize', handleResize);
+
+const hideHamburger = () => {
+    let ham = document.getElementById("hamburger");
+    if (ham.classList.contains("show")) {
+        ham.classList.remove("show");
+    }
+}
+
+const getParents = (elem) => {
+    if (elem.tagName == "HTML") {
+        return [elem];
+    }
+    return [elem.parentElement, ...getParents(elem.parentElement)]
+}
+
+const hasParent = (elem, parent) => {
+    let parents = getParents(elem);
+    for (let i = 0; i < parents.length; i++) {
+        const item = parents[i];
+        if (parent == item) {
+            return true;
+        }
+    }
+    return false;
+}
+
+const handleClick = (e) => {
+    let hamburger = document.getElementsByClassName("hamburgerWrapper")[0];
+    if (!hasParent(e.target, hamburger)) {
+        hideHamburger();
+    }
+}
+
+document.addEventListener('click', handleClick);
 

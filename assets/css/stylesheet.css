@@ -935,14 +935,13 @@ aside img{
 	text-align: right;
 }
 
+/* Nav */
+
 #dynamic_nav {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: end;
 	align-items: center;
-}
-
-#dynamic_nav li {
 }
 
 .hamburgerWrapper {
@@ -955,17 +954,19 @@ aside img{
 
 #hamburger {
 	position: absolute;
-	background-color: rgb(208, 208, 255);
+	background-color: var(--primary);
+	color: white;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	text-align: right;
-	padding: 10px;
 	right: 0px;
 	top: 35px;
 	opacity: 0;
 	pointer-events: none;
 	transition: 150ms;
+	width: 280px;
+	padding: 1rem;
 }
 
 #hamburger.show {
@@ -977,6 +978,10 @@ aside img{
 	line-height: 14px;
 }
 
+#hamburger a {
+	color: white;
+}
+
 #hamburgerButton {
 	position: relative;
 	top: 1px;
@@ -986,7 +991,7 @@ aside img{
 	text-shadow: none;
 	margin: 0px;
 	padding: 0px;
-	min-width: 16px;
+	min-width: 17px;
 }
 
 .navigation {
@@ -995,11 +1000,18 @@ aside img{
 	grid-column: auto;
 	height: 140px;
 	justify-content: flex-end;
+	opacity: 0;
+}
+
+.navigation.show {
+	opacity: 1;
 }
 
 .navigation li {
 	line-height: normal;
 	font-size: 1.2rem;
 }
+
+/* End Nav */
 
 
