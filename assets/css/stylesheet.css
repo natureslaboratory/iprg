@@ -936,15 +936,13 @@ aside img{
 }
 
 #dynamic_nav {
-	white-space: nowrap;
-	position: relative;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: end;
 	align-items: center;
 }
 
 #dynamic_nav li {
-	display: inline-block;
 }
 
 .hamburgerWrapper {

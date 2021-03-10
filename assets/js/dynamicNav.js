@@ -14,10 +14,10 @@ const handleResize = (e) => {
 
     let navBox = newNav.getBoundingClientRect();
 
-    if (navBox.right > document.documentElement.clientWidth) {
+    if (areChildrenWrapped(newNav)) {
         let hamburger = createHamburger(newNav);
 
-        while (newNav.getBoundingClientRect().right > document.documentElement.clientWidth) {
+        while (areChildrenWrapped(newNav)) {
             moveLinkToHamburger(newNav, hamburger);
         }
     }
@@ -60,7 +60,7 @@ const createHamburger = (navigation) => {
 
     hamburger.appendChild(hamburgerButton);
     hamburger.appendChild(hamburgerList);
-    
+
     navigation.appendChild(hamburger);
     return hamburgerList;
 }
@@ -83,6 +83,28 @@ const getChildren = (elem) => {
         childArray = [...childArray, children[i]];
     }
     return childArray
+}
+
+const isChildWrapped = (currentChild) => {
+    if (!currentChild.previousSibling) {
+        return false;
+    }
+    let currentChildRect = currentChild.getBoundingClientRect();
+    let prevChildRect = currentChild.previousSibling.getBoundingClientRect();
+    if (currentChildRect.left < prevChildRect.right) {
+        return true;
+    }
+    return false
+}
+
+const areChildrenWrapped = (nav) => {
+    for (let i = 0; i < nav.children.length; i++) {
+        const element = nav.children[i];
+        if (isChildWrapped(element)) {
+            return true
+        }
+    }
+    return false;
 }
 
 // End of Helper Functions
