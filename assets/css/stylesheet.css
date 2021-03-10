@@ -1215,6 +1215,7 @@ form {
 
 .left-align-inner {
 	grid-template-areas: "img text";
+	justify-self: start;
 }
 
 .right-align-inner {
