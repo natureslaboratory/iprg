@@ -1001,6 +1001,7 @@ aside img{
 	grid-column: auto;
 	height: 140px;
 	justify-content: flex-end;
+	align-items: center;
 	opacity: 1;
 }
 
@@ -1174,5 +1175,19 @@ form {
 #delete-button:hover {
 	background-color: red;
 	border: 1px solid red;
+}
+
+.wrap > .restrict {
+	max-width: 800px;
+}
+
+.right-align-inner {
+	margin-left: auto;
+	margin-right: 50px;
+}
+
+.left-align-inner {
+	margin-right: auto;
+	margin-left: 50px;
 }
 
