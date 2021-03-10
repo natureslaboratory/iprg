@@ -194,6 +194,9 @@ window.addEventListener('resize', handleResize);
 
 const hideHamburger = () => {
     let ham = document.getElementById("hamburger");
+    if (!ham) {
+        return;
+    }
     if (ham.classList.contains("show")) {
         ham.classList.remove("show");
     }

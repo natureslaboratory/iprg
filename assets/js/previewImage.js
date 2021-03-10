@@ -64,11 +64,24 @@ deleteButton.addEventListener('click', (e) => {
     document.getElementById("preview-div").classList.add("hide");
 })
 
+// To show delete option
+
 document.getElementById("preview-div").addEventListener('mouseover', (e) => {
     overlayOn();
 })
 
 document.getElementById("preview-div").addEventListener('mouseleave', (e) => {
-    console.log("mouseleave!")
     overlayOff();
+})
+
+// For mobile users
+
+document.getElementById("preview-div").addEventListener('touchstart', (e) => {
+    overlayOn();
+}, {passive: true})
+
+document.addEventListener('touchstart', (e) => {
+    if (!hasParent(e.target, document.getElementById("preview-div"))) {
+        overlayOff();
+    }
 })
