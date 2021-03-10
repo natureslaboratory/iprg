@@ -1223,7 +1223,7 @@ form {
 }
 
 .align-outer {
-	padding: 0 50px;
+	margin: 0 50px;
 	max-width: 1280px;
 	margin: 0 auto;
 	float: none;
@@ -1241,13 +1241,31 @@ form {
 
 @media screen and (max-width: 600px) {
 	.align-outer {
-		padding: 0 30px;
+		margin: 0 30px;
+	}
+
+	.left-align img,.right-align img{
+		width: 100%;
+		max-width:100%;
+		margin: 0;
+		display:block;
+		float:none;
+	}
+
+	.align-inner {
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+		grid-template-areas: "img" "text";
+	}
+
+	.right-align-inner {
+		text-align: left;
 	}
 }
 
 @media screen and (max-width: 400px) {
 	.align-outer {
-		padding: 0 15px;
+		margin: 0 15px;
 	}
 }
 
