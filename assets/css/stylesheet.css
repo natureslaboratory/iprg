@@ -1026,6 +1026,10 @@ form {
 	max-width: none;
 }
 
+.form-section .form-button {
+	margin-top: 15px;
+}
+
 .countWords {
 	margin: 0;
 }
