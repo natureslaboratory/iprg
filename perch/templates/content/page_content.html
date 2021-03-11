@@ -354,4 +354,23 @@
 		</perch:repeater>
 	</perch:block>
 
+	<perch:block type="speakers" label="Speakers">
+		<perch:repeater id="speaker-repeater" label="Speaker Container">
+			<perch:before><div class="speaker-container"></perch:before>
+				<div class="section-container">
+					<div class="section-header">
+						<h2><perch:content type="text" id="talk-name" label="Talk Title" /></h2>
+						<p class="date-time"><perch:content type="time" id="time" label="Time" format="%H:%M" /> - <perch:content type="date" id="date" label="Date" format="%A, %e %B %Y" native/></p>
+						<div class="speaker-info">
+							<img src="<perch:content type="image" label="Speaker Picture" id="speaker-image" height="120" width="120" crop="true" filter="imgix" imgix-opts="auto=format,compress" />" />
+							<h4 class="speaker-name"><perch:content type="text" id="speaker" label="Speaker" /></h4>
+						</div>
+					</div>
+					<perch:content type="textarea" id="description" label="Short Description" editor="redactor" html />
+					<a href="<perch:content type="text" id="link" label="Link">" target="_blank" class="button" ><perch:content type="text" id="link-label" label="Link Label" /></perch:content></a>
+				</div>
+			<perch:after></div></perch:after>
+		</perch:repeater>
+	</perch:block>
+
 </perch:blocks>
