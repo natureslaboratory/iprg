@@ -1362,6 +1362,7 @@ form {
 
 .section-container > .button {
 	text-align: center;
+	margin-top: 10px;
 	/* border: 1px solid var(--primary);
 	background: #fafafa;
 	color: 1px solid var(--primary);
