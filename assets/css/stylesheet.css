@@ -466,7 +466,7 @@ footer ul.social li span{
 }
 
 .hero > div > img {
-	max-width: 200px;
+	max-width: 100px;
 	height: auto;
 	margin-top: 20px;
 	background-color: white;
@@ -481,6 +481,10 @@ footer ul.social li span{
 @media screen and (max-width:768px){
 	.hero{
 		min-height:300px;
+	}
+
+	.hero > div > img {
+		max-width: 70px;
 	}
 }
 
