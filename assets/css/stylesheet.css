@@ -90,7 +90,7 @@ header, footer, .wrap{
 h1,h2,h3,h4,h5,h6{
 	margin-top:1rem;
 	font-weight:700;
-	margin-bottom:2rem;
+	margin-bottom:1rem;
 	color:var(--bright);
 }
 
@@ -1048,13 +1048,13 @@ aside img{
 	display: none;
 }
 
-@media screen and (min-width: 1241px) {
+@media screen and (min-width: 1276px) {
 	#hamburgerButton {
 		display: none;
 	}
 }
 
-@media screen and (max-width: 1241px) {
+@media screen and (max-width: 1275px) {
 	#hamburger li:nth-last-child(-n+2) {
 		display: block;
 	}
@@ -1064,17 +1064,7 @@ aside img{
 	}
 }
 
-@media screen and (max-width: 1150px) {
-	#hamburger li:nth-last-child(-n+2) {
-		display: block;
-	}
-
-	.navigation li:nth-last-child(-n+2) {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 	#hamburger li:nth-last-child(-n+4) {
 		display: block;
 	}
@@ -1084,7 +1074,7 @@ aside img{
 	}
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
 	#hamburger li:nth-last-child(-n+5) {
 		display: block;
 	}
@@ -1302,11 +1292,17 @@ form {
 .logo-container {
 	margin: 30px auto 0 auto;
 	display: flex;
-	
 	gap: 40px;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+}
+
+@media screen and (max-width: 520px) {
+	.logo-container {
+		flex-direction: column;
+		gap: 20px;
+	}
 }
 
 .logo-container > a {
