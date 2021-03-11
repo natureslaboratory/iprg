@@ -1021,6 +1021,20 @@ aside img{
 	font-size: 1.2rem;
 }
 
+@media screen and (max-width: 768px) {
+	.navigation {
+		height: 70px;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.navigation {
+		height: 50px;
+	}
+}
+
 #hamburger > li {
 	display: none;
 }
