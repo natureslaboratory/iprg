@@ -1235,7 +1235,7 @@ form {
 	gap: 10px;
 }
 
-.align-inner h1,h2,h3,h4,h5,h6,p {
+.align-inner :is(h1,h2,h3,h4,h5,h6,p) {
 	margin: 0;
 }
 
