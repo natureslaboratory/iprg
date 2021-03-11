@@ -1,8 +1,7 @@
-<perch:before><ul id="dynamic_nav"></perch:before>
-    <li<perch:if exists="current_page"> class="selected"</perch:if>
-    <perch:if exists="ancestor_page"> class="ancestor"</perch:if>>
-    <a href="<perch:pages id=" pagePath" />">
-    <perch:pages id="pageNavText" /></a>
-    <perch:pages id="subitems" encode="false" />
-    </li>
-<perch:after></ul></perch:after>
+
+<li<perch:if exists="current_page"> class="selected"</perch:if>
+<perch:if exists="ancestor_page"> class="ancestor"</perch:if>>
+<a href="<perch:pages id=" pagePath" />">
+<perch:pages id="pageNavText" /></a>
+<perch:pages id="subitems" encode="false" />
+</li>
