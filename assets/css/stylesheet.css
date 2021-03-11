@@ -1052,12 +1052,12 @@ aside img {
 		height: 50px;
 	}
 }
-/* 
+
 #hamburger>li {
 	display: none;
-} */
+}
 
-/* @media screen and (min-width: 1276px) {
+@media screen and (min-width: 1276px) {
 	#hamburgerButton {
 		display: none;
 	}
@@ -1088,7 +1088,7 @@ aside img {
 	.navigation li:nth-last-child(-n+5) {
 		display: none;
 	}
-} */
+}
 
 /* End Nav */
 
