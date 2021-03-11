@@ -344,4 +344,14 @@
 		</perch:repeater>
 	</perch:block>
 
+	<perch:block type="logos" label="Logo Squares">
+		<perch:repeater id="logo-repeater" label="Logo Container">
+			<perch:before><div class="logo-container"></perch:before>
+				<a href="<perch:content id="logo-href" type="text" label="Link">">
+					<img src="<perch:content id="logo" label="Logo" type="image" height="120" crop="true" filter="imgix" imgix-opts="auto=format,compress" />" alt="Logo" >
+				</a>
+			<perch:after></div></perch:after>
+		</perch:repeater>
+	</perch:block>
+
 </perch:blocks>
