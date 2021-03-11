@@ -731,7 +731,7 @@ footer ul.social li span{
 	float:left;
 	margin-right:2rem;
 	margin-bottom:2rem;
-	max-width:300px;
+	max-width:180px;
 	height:auto;
 }
 
@@ -739,7 +739,7 @@ footer ul.social li span{
 	float:right;
 	margin-left:2rem;
 	margin-bottom:2rem;
-	max-width:300px;
+	max-width:180px;
 	height:auto;
 }
 
