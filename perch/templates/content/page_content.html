@@ -46,6 +46,24 @@
 		</div>
 	</perch:block>
 
+	<perch:block type="text_logos" label="Text Field With Logos">
+		<div class="wrap">
+			<div class="restrict text-logo-wrapper">
+				<div class="text-logo-content">
+					<perch:content type="textarea" id="textarea" label="Text Field" editor="redactor" imagewidth="725"
+					html />
+				</div>
+				<div class="text-logo-image">
+					<perch:repeater id="repeater" label="Repeater">
+						<a href="<perch:content id="link" type="text" label="Icon Link Url">">
+							<img src="<perch:content type="image" label="Speaker Picture" id="speaker-image" height="120" crop="true" filter="imgix" imgix-opts="auto=format,compress" />" />
+						</a>
+					</perch:repeater>
+				</div>
+			</div>
+		</div>
+	</perch:block>
+
 	<perch:block type="form" label="Contact Form">
 		<div class="wrap">
 			<div class="restrict">
