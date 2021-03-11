@@ -334,6 +334,10 @@ header ul.languages li a{
 	header .restrict{
 		grid-template-columns: 1fr 1fr;	
 	}
+
+	p.logo > a > img {
+		max-height: 100px;
+	}
 	header nav{
 		grid-row:2;
 		grid-column: 1 / 3;
