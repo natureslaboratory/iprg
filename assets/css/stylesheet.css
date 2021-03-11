@@ -1309,6 +1309,7 @@ form {
 
 .logo-container > a > img {
 	max-height: 100px;
+	min-height: 100px;
 	width: auto;
 }
 
