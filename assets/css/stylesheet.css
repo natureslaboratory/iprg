@@ -1235,7 +1235,7 @@ form {
 	gap: 10px;
 }
 
-.align-inner > div > h1,h2,h3,h4,h5,h6,p {
+.align-inner h1,h2,h3,h4,h5,h6,p {
 	margin: 0;
 }
 
@@ -1301,15 +1301,21 @@ form {
 .logo-container {
 	margin: 30px auto 0 auto;
 	display: flex;
+	
 	gap: 40px;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
 }
 
+.logo-container > a {
+	
+}
+
 .logo-container > a > img {
 	max-height: 100px;
 	min-height: 100px;
 	width: auto;
+	display: block;
 }
 
