@@ -114,6 +114,7 @@ p, ul, ol{
 	margin-bottom:2rem;
 	font-size:1.2rem;
 	color:var(--primary);
+	font-family: 'Open Sans', sans-serif;
 }
 
 strong{
@@ -1115,7 +1116,7 @@ form {
 	margin: 0;
 }
 
-.countWords > div > input, textarea {
+.countWords > div > :is(input, textarea) {
 	/* width: 100%; */
 	max-width: none;
 }
