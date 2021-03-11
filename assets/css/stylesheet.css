@@ -1092,7 +1092,7 @@ form {
 	flex-direction: column;
 	gap: 10px;
 	margin: 0 auto;
-	max-width: 500px;
+	max-width: 608px;
 }
 
 .form-section input {
@@ -1103,13 +1103,12 @@ form {
 	margin-top: 15px;
 }
 
-.countWords {
-	margin: 0;
+.form-section > :is(input, textarea) {
+	max-width: none;
 }
 
-.countWords > div > :is(input, textarea) {
-	/* width: 100%; */
-	max-width: none;
+.countWords {
+	margin: 0;
 }
 
 .countWords + p {
