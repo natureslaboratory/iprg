@@ -111,7 +111,7 @@ h4, h5, h6{
 }
 
 p, ul, ol{
-	margin-bottom:1rem;
+	margin-bottom:2rem;
 	font-size:1.2rem;
 	color:var(--primary);
 }
@@ -1304,6 +1304,7 @@ form {
 	gap: 40px;
 	align-items: center;
 	justify-content: center;
+	width: 100%;
 }
 
 .logo-container > a > img {
