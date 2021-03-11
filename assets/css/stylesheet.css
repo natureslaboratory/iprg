@@ -1333,7 +1333,6 @@ form {
 .section-container {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
 	gap: 10px;
 	margin: 16px;
 	background: #fafafa;
