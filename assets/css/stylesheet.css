@@ -1355,9 +1355,14 @@ form {
 .speaker-info {
 	margin-top: 20px;
 	display: grid;
-	grid-template-columns: 50px auto;
+	grid-template-columns: auto auto;
 	align-items: center;
+	justify-content: start;
 	gap: 15px;
+}
+
+.speaker-info > img {
+	max-width: 60px;
 }
 
 .section-container > .button {
