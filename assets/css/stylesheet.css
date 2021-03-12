@@ -1064,8 +1064,7 @@ aside img {
 	margin: -10px 0;
 }
 
-
-.navigation li:hover > a {
+.navigation li:hover>a {
 	color: white;
 	background-color: var(--primary);
 	transition: 150ms background-color;
@@ -1077,7 +1076,7 @@ aside img {
 	transition: 150ms background-color;
 }
 
-.navigation li > a {
+.navigation li>a {
 	text-decoration: none;
 }
 
@@ -1107,7 +1106,7 @@ aside img {
 	transition: 150ms background-color;
 }
 
-.navigation ul[data-depth="1"] li > a {
+.navigation ul[data-depth="1"] li>a {
 	background-color: var(--primary);
 	color: white;
 	white-space: nowrap;
@@ -1151,16 +1150,15 @@ aside img {
 	justify-self: flex-end;
 }
 
-#hamburger.mobile > li {
+#hamburger.mobile>li {
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto;
-	grid-template-areas: "icon link"
-						 "sublinks sublinks";
+	grid-template-areas: "icon link" "sublinks sublinks";
 	justify-self: stretch;
 }
 
-#hamburger.mobile > li:hover > i {
+#hamburger.mobile>li:hover>i {
 	background-color: inherit;
 	color: inherit;
 }
@@ -1170,7 +1168,7 @@ aside img {
 	pointer-events: all;
 }
 
-#hamburger.mobile li > i {
+#hamburger.mobile li>i {
 	grid-area: icon;
 	justify-self: center;
 	align-self: center;
@@ -1181,13 +1179,13 @@ aside img {
 	cursor: pointer;
 }
 
-#hamburger.mobile li > i.spin::before {
+#hamburger.mobile li>i.spin::before {
 	transform: rotate(180deg);
 }
 
-#hamburger.mobile li > i::before {
+#hamburger.mobile li>i::before {
 	margin: auto;
-	transform: translate(0deg);
+	transform: rotate(0deg);
 	transition: transform 150ms;
 }
 
@@ -1202,21 +1200,20 @@ aside img {
 	grid-area: sublinks;
 }
 
-#hamburger.mobile ul[data-depth="1"] li > a {
+#hamburger.mobile ul[data-depth="1"] li>a {
 	color: black;
-    background-color: var(--grey);
+	background-color: var(--grey);
 }
 
 #hamburger.mobile ul[data-depth="1"] li {
-    background-color: var(--primary);
-    margin: 0;
+	background-color: var(--primary);
+	margin: 0;
 }
 
-#hamburger.mobile ul[data-depth="1"] li:hover > a{
+#hamburger.mobile ul[data-depth="1"] li:hover>a {
 	background-color: var(--secondary);
 	color: white;
 }
-
 
 @media screen and (max-width: 768px) {
 	.navigation {
@@ -1224,8 +1221,6 @@ aside img {
 		margin-top: auto;
 		margin-bottom: auto;
 	}
-
-
 }
 
 @media screen and (max-width: 520px) {
@@ -1557,11 +1552,9 @@ form {
 		display: flex;
 		flex-direction: column;
 	}
-
 	.text-logo-content {
 		max-width: 100%;
 	}
-
 	.text-logo-wrapper>.text-logo-image {
 		display: flex;
 		margin: 10px 0 30px 0;
@@ -1574,7 +1567,6 @@ form {
 }
 
 @media screen and (max-width: 520px) {
-
 	.text-logo-wrapper>.text-logo-image {
 		display: flex;
 		margin: 10px 0 30px 0;
