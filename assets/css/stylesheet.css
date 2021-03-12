@@ -1018,6 +1018,11 @@ aside img {
 	margin: 0px;
 	padding: 0px;
 	min-width: 17px;
+	display: block;
+}
+
+#hamburgerButton.hide {
+	display: none;
 }
 
 .navigation {
@@ -1043,6 +1048,7 @@ aside img {
 	display: none;
 }
 
+
 @media screen and (max-width: 768px) {
 	.navigation {
 		height: 70px;
@@ -1056,39 +1062,6 @@ aside img {
 		height: 50px;
 	}
 }
-
-@media screen and (min-width: 1276px) {
-	#hamburgerButton {
-		display: none;
-	}
-}
-/* 
-@media screen and (max-width: 1275px) {
-	#hamburger li:nth-last-child(-n+2) {
-		display: block;
-	}
-	.navigation li:nth-last-child(-n+2) {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 1000px) {
-	#hamburger li:nth-last-child(-n+4) {
-		display: block;
-	}
-	.navigation li:nth-last-child(-n+4) {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 700px) {
-	#hamburger li:nth-last-child(-n+5) {
-		display: block;
-	}
-	.navigation li:nth-last-child(-n+5) {
-		display: none;
-	}
-} */
 
 /* End Nav */
 

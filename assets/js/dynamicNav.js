@@ -40,6 +40,9 @@ const handleResize = () => {
 }
 
 const moveAllToNav = (nav, hamburger) => {
+    
+    document.getElementById("hamburgerButton").classList.add("hide");
+    
     for (let i = 0; i < nav.children.length; i++) {
         const child = nav.children[i];
         if (child.classList.contains("hide")) {
@@ -56,6 +59,10 @@ const moveAllToNav = (nav, hamburger) => {
 }
 
 const moveOneToHamburger = (nav, hamburger) => {
+    const button = document.getElementById("hamburgerButton");
+    if (button.classList.contains("hide")) {
+        button.classList.remove("hide");
+    }
     for (let i = nav.children.length-1; i >= 0; i--) {
         const child = nav.children[i];
         if (!child.classList.contains("hide")) {
