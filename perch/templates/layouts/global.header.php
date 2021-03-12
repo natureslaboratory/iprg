@@ -59,13 +59,13 @@ class perchNavigation
 		// }
 
 
-		$fullNav = $this->buildNav($navigationAssocArray, "dynamic_nav", 0);
+		$fullNav = $this->buildNav($navigationAssocArray, "dynamic_nav", "fas fa-angle-down", 0);
 		$fullNav .= "<div class='hamburgerWrapper'>
 						<button id='hamburgerButton'>
 							<i class='fas fa-bars'></i>
 						</button>
 							";
-		$fullNav .= $this->buildNav($navigationAssocArray, "hamburger", 0);
+		$fullNav .= $this->buildNav($navigationAssocArray, "hamburger", "fas fa-angle-left", 0);
 		$fullNav .= "</div>";
 
 		echo $fullNav;
@@ -163,7 +163,7 @@ class perchNavigation
 		return $childArray;
 	}
 
-	public function buildNav($pageArray, $id, $depth = 0)
+	public function buildNav($pageArray, $id, $submenuIcon, $depth = 0)
 	{
 		$checkedId = $id ? $id : "";
 		$nav = "<ul data-depth={$depth} id={$id}>";
@@ -171,7 +171,7 @@ class perchNavigation
 			if (!$this->hasChildren($pageArray, $page) && ($this->getDepth($pageArray, $page) == $depth)) {
 				$element = "<li>
 								<a href={$page['pagePath']}>
-									{$page['pageTitle']}
+									{$page['pageNavText']}
 								</a>
 							  </li>";
 				$nav .= $element;
@@ -179,13 +179,19 @@ class perchNavigation
 			}
 
 			if ($this->hasChildren($pageArray, $page)) {
+				$icon2 = "";
+				if ($id == "hamburger") {
+					$icon2 = "<i class='fas fa-angle-down hide mobile'></i>";
+				}
 				$nav .= "<li>
+							{$icon2}
 							<a href={$page['pagePath']}>
-								{$page['pageTitle']}
+								<i class='{$submenuIcon}'></i>
+								{$page['pageNavText']}
 							</a>";
 				$children = $this->getChildren($pageArray, $page);
 				$newDepth = $depth + 1;
-				$nav .= $this->buildNav($children, "", $newDepth);
+				$nav .= $this->buildNav($children, "", $submenuIcon, $newDepth);
 			}
 
 		}
