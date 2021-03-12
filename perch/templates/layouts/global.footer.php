@@ -23,6 +23,7 @@
 	<script src="/assets/js/wordCounter.js"></script>
 	<script src="/assets/js/dynamicNav.js"></script>
 	<script src="/assets/js/previewImage.js"></script>
+	<script src="/assets/js/newDynamicNav.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 </body>
 
