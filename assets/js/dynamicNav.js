@@ -6,6 +6,8 @@ Apply appropriate classes.
 
 */
 
+let interval = null;
+
 const isChildWrapped = (currentChild) => {
     if (!currentChild.previousSibling || currentChild.classList.contains("hide")) {
         return false;
@@ -32,7 +34,6 @@ const handleResize = () => {
     let nav = document.getElementById("dynamic_nav");
     let hamburger = document.getElementById("hamburger");
     moveAllToNav(nav, hamburger);
-    console.log(areChildrenWrapped(nav));
     while (areChildrenWrapped(nav)) {
         moveOneToHamburger(nav, hamburger);
     }
@@ -115,17 +116,82 @@ const handleClick = (e) => {
     }
 }
 
+const hasChildLinks = (navItem) => {
+    let navItemNode;
+    if (navItem.tagName == "A") {
+        navItemNode = navItem.parentElement;
+    } else {
+        navItemNode = navItem;
+    }
+    for (let i = 0; i < navItemNode.children.length; i++) {
+        const child = navItemNode.children[i];
+        if (child.tagName == "UL") {
+            return true;
+        }
+    }
+    return false;
+}
+
+const getChildLinks = (navItem) => {
+    let navItemNode;
+    if (navItem.tagName == "A") {
+        navItemNode = navItem.parentElement;
+    } else {
+        navItemNode = navItem;
+    }
+    for (let i = 0; i < navItemNode.children.length; i++) {
+        const child = navItemNode.children[i];
+        if (child.tagName == "UL") {
+            return child;
+        }
+    }
+    return null;
+}
+
+const handleMouseOver = (e) => {
+    if (hasChildLinks(e.target)) {
+        const childLinksWrapper = getChildLinks(e.target);
+        let element = e.target;
+        if (element.tagName == "A") {
+            element = element.parentElement;
+        }
+        const linkBox = element.getBoundingClientRect();
+        const height = linkBox.bottom - linkBox.top;
+        childLinksWrapper.style.top = `${height}px`;
+        childLinksWrapper.classList.add("show");
+    }
+}
+
+const handleMouseLeave = (e) => {
+    for (let i = 0; i < e.target.children.length; i++) {
+        const child = e.target.children[i];
+        if (child.tagName == "UL") {
+            child.classList.remove("show");
+        }
+        
+    }
+}
+
 let dynamic_nav = document.getElementById("dynamic_nav");
 if (dynamic_nav) {
-    handleResize();
+    window.onload = () => {
+        handleResize()
+        document.getElementsByClassName("navigation")[0].classList.add("show");
+    };
+
     window.addEventListener("resize", handleResize);
 
     document.addEventListener('click', handleClick);
+    
+
+    for (let i = 0; i < dynamic_nav.children.length; i++) {
+        const child = dynamic_nav.children[i];
+        child.addEventListener("mouseover", handleMouseOver);
+        child.addEventListener("mouseleave", handleMouseLeave);
+    }
 
     let hamburgerButton = document.getElementById("hamburgerButton");
-    console.log(hamburgerButton);
     document.getElementById("hamburgerButton").addEventListener('click', (e) => {
-        console.log("click!");
         let ham = document.getElementById("hamburger");
         if (ham.classList.contains("show")) {
             ham.classList.remove("show");
@@ -133,4 +199,6 @@ if (dynamic_nav) {
             ham.classList.add("show");
         }
     })
+
+
 }
