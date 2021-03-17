@@ -42,30 +42,13 @@ class perchNavigation
 			'flat' => true
 		));
 
-		// foreach ($navigationAssocArray as $key => $value) {
-		// 	foreach ($value as $itemKey => $item) {
-		// 		if (gettype($item) == "array") {
-		// 			foreach ($item as $subItemKey => $subItemValue) {
-		// 				echo nl2br("-- {$subItemKey}: ${subItemValue} \n");
-		// 			}
-		// 		}
-		// 	}
-		// }
-
-		// $array = $this->buildAssocArray($navigationAssocArray);
-		// foreach ($array as $value) {
-		// 	echo $value;
-		// 	echo "<br />";
-		// }
-
-
 		$fullNav = $this->buildNav($navigationAssocArray, "dynamic_nav", "fas fa-angle-down", 0);
 		$fullNav .= "<div class='hamburgerWrapper'>
-						<button id='hamburgerButton'>
+						<button class='hamburgerButton'>
 							<i class='fas fa-bars'></i>
 						</button>
 							";
-		$fullNav .= $this->buildNav($navigationAssocArray, "hamburger", "fas fa-angle-left", 0);
+		$fullNav .= $this->buildHamburger($navigationAssocArray, "hamburger", "fas fa-angle-left", 0);
 		$fullNav .= "</div>";
 
 		echo $fullNav;
@@ -165,12 +148,11 @@ class perchNavigation
 
 	public function buildNav($pageArray, $id, $submenuIcon, $depth = 0)
 	{
-		$checkedId = $id ? $id : "";
-		$nav = "<ul data-depth={$depth} id={$id}>";
+		$nav = "<ul class='topNav'>";
 		foreach ($pageArray as $page) {
 			if (!$this->hasChildren($pageArray, $page) && ($this->getDepth($pageArray, $page) == $depth)) {
-				$element = "<li>
-								<a href={$page['pagePath']}>
+				$element = "<li data-children='false' class='navItem'>
+								<a href={$page['pagePath']} class='navLink'>
 									{$page['pageNavText']}
 								</a>
 							  </li>";
@@ -179,21 +161,64 @@ class perchNavigation
 			}
 
 			if ($this->hasChildren($pageArray, $page)) {
-				$icon2 = "";
-				if ($id == "hamburger") {
-					$icon2 = "<i class='fas fa-angle-down hide mobile'></i>";
-				}
-				$nav .= "<li>
-							{$icon2}
-							<a href={$page['pagePath']}>
-								<i class='{$submenuIcon}'></i>
+				// $icon2 = "";
+				// if ($id == "hamburger") {
+				// 	$icon2 = "<i class='fas fa-angle-down hide mobile'></i>";
+				// }
+				$nav .= "<li data-children='true' class='navItem'>
+							<a href={$page['pagePath']} class='navLink'>
+								<i class='fas fa-angle-down linkIcon'></i>
+								{$page['pageNavText']}
+							</a>";
+				$children = $this->getChildren($pageArray, $page);
+				$nav .= $this->buildSubMenu($children, "nav") . "</li>";
+			}
+
+		}
+
+		$nav .= "</ul>";
+		return $nav;
+	}
+
+	public function buildSubMenu($links, $type)
+	{
+		$subNav = "<ul class='{$type}ChildItems hide'>";
+		foreach ($links as $link) {
+			$subNav .= "<li class='{$type}ChildItem'>
+							<a href={$link['pagePath']} class='{$type}ChildLink'>
+								{$link['pageNavText']}
+							</a>
+						</li>";
+		}
+		$subNav .= "</ul>";
+		return $subNav;
+	}
+
+	public function buildHamburger($pageArray, $id, $submenuIcon, $depth = 0)
+	{
+		$nav = "<ul data-depth={$depth} class='hamburger hide'>";
+		foreach ($pageArray as $page) {
+			if (!$this->hasChildren($pageArray, $page) && ($this->getDepth($pageArray, $page) == $depth)) {
+				$element = "<li data-children='false' class='hamburgerItem'>
+								<a href={$page['pagePath']} class='hamburgerLink'>
+									{$page['pageNavText']}
+								</a>
+							  </li>";
+				$nav .= $element;
+				continue;
+			}
+
+			if ($this->hasChildren($pageArray, $page)) {
+				$nav .= "<li data-children='true' class='hamburgerItem'>
+							<i class='fas fa-angle-down hide mobile linkIcon'></i>
+							<a href={$page['pagePath']} class='hamburgerLink'>
+								<i class='fas fa-angle-left linkIcon hide'></i>
 								{$page['pageNavText']}
 							</a>";
 				$children = $this->getChildren($pageArray, $page);
 				$newDepth = $depth + 1;
-				$nav .= $this->buildNav($children, "", $submenuIcon, $newDepth);
+				$nav .= $this->buildSubMenu($children, "hamburger") . "</li>";
 			}
-
 		}
 
 		$nav .= "</ul>";
