@@ -1,0 +1,18 @@
+<perch:before><ul class="topNav"></perch:before>
+<li 
+    class="<perch:if exists="current_page">selected</perch:if><perch:if exists="ancestor_page">ancestor</perch:if> navItem"
+    data-children="<perch:if exists="subitems">true<perch:else>false</perch:if>"
+>
+    <perch:if exists="subitems">
+        <button class="navLabel navLink">
+            <perch:pages id="pageNavText" />
+            <i class="fas fa-angle-down linkIcon"></i>
+        </button>
+    <perch:else>
+        <a href="<perch:pages id="pagePath" />" class="navLink">
+            <perch:pages id="pageNavText" />
+        </a>
+    </perch:if>
+    <perch:pages id="subitems" encode="false"/>
+</li>
+<perch:after></ul></perch:after>

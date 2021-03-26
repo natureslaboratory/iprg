@@ -1,20 +1,38 @@
 <perch:blocks>
+	<perch:block type="alert-bar" label="Alert Bar">
+		<div class="alert-outer">
+			<div class="restrict">
+				<h4><perch:content id="alert" type="textarea" editor="redactor" /></h4>
+			</div>
+		</div>
+	</perch:block>
 
 	<perch:block type="hero" label="Hero">
 		<div class="hero" style="background-image:url('<perch:content id="image_large" label="Image" type="image" width="1440" height="500" crop="true" filter="imgix" imgix-opts="auto=format,compress" />');background-size:cover;">
-		<img src="<perch:content id="image_large" label="Image" type="image" width="1440" height="500" crop="true"
-			filter="imgix" imgix-opts="auto=format,compress" />" alt="Whitby" style="display:none;" />
-		<div>
-			<h1>
-				<perch:content type="text" id="heading" label="Heading" />
-			</h1>
-			<p>
-				<perch:content type="text" id="subheading" label="Sub Heading" />
-			</p>
-			<perch:if exists="logo">
-				<img src="<perch:content id="logo" label="Logo" type="image" width="120" height="120" crop="true" filter="imgix" imgix-opts="auto=format,compress" />" alt="Logo" >
-			</perch:if>
-		</div>
+			<img src="<perch:content id="image_large" label="Image" type="image" width="1440" height="500" crop="true"
+				filter="imgix" imgix-opts="auto=format,compress" />" alt="Whitby" style="display:none;" />
+			<div class="hero-content">
+				<div class="restrict">
+					<h1>
+						<perch:content type="text" id="heading" label="Heading" />
+					</h1>
+					<p>
+						<perch:content type="text" id="subheading" label="Sub Heading" />
+					</p>
+					<perch:if exists="logo">
+						<img src="<perch:content id="logo" label="Logo" type="image" width="120" height="120" crop="true" filter="imgix" imgix-opts="auto=format,compress" />" alt="Logo" >
+					</perch:if>
+					<perch:repeater id="buttons" label="Buttons">
+						<perch:before><div class="hero-buttons"></perch:before>
+								<a href="<perch:content id="button-link" type="text" label="Button Link">"> 
+									<button>
+										<perch:content type="text" label="Button Text" id="button-text">
+									</button>
+								</a>
+						<perch:after></div></perch:after>
+					</perch:repeater>
+				</div>
+			</div>
 		</div>
 	</perch:block>
 
@@ -222,11 +240,11 @@
 
 	<perch:block type="logos" label="Logo Squares">
 		<perch:repeater id="logo-repeater" label="Logo Container">
-			<perch:before><div class="logo-container"></perch:before>
+			<perch:before><div class="restrict narrow"><div class="logo-container"></perch:before>
 				<a href="<perch:content id="logo-href" type="text" label="Link">">
 					<img src="<perch:content id="logo" label="Logo" type="image" height="120" crop="true" filter="imgix" imgix-opts="auto=format,compress" />" alt="Logo" >
 				</a>
-			<perch:after></div></perch:after>
+			<perch:after></div></div></perch:after>
 		</perch:repeater>
 	</perch:block>
 

@@ -1,0 +1,7 @@
+<perch:before><ul class="hamburgerChildItems hide"></perch:before>
+    <li class="<perch:if exists="current_page">selected</perch:if><perch:if exists="ancestor_page">ancestor</perch:if> hamburgerChildItem">
+        <a href="<perch:pages id="pagePath" />" class="hamburgerChildLink">
+            <perch:pages id="pageNavText" />
+        </a>
+    </li>
+    <perch:after></ul></perch:after>

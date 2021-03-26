@@ -1,0 +1,28 @@
+{
+  "name": "iprgconference",
+  "version": "1.0.0",
+  "description": "Update branch. Moved to Jack's server. Is it working?",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jb-natureslab/iprgconference.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jb-natureslab/iprgconference/issues"
+  },
+  "homepage": "https://github.com/jb-natureslab/iprgconference#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.10",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.26.1",
+    "webpack-cli": "^4.5.0"
+  }
+}
