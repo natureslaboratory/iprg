@@ -1059,7 +1059,7 @@ aside img {
 	grid-column: auto;
 	justify-content: flex-end;
 	align-items: center;
-	opacity: 1;
+	opacity: 0;
 	gap: 20px;
 	z-index: 10;
 }
