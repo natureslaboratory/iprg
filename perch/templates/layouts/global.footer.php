@@ -20,7 +20,7 @@
     </footer>
 
 	<script src="https://kit.fontawesome.com/69f24bba74.js" crossorigin="anonymous" defer></script>
-	<script src="/assets/js/bundle.js"></script>
+	<script src="/assets/js/bundle1.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 	
 	<!-- Matomo -->
