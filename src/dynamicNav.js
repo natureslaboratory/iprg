@@ -1,4 +1,4 @@
-import Navigation from './classes/Navigation.js';
+import Navigation from './classes/Navigation.ts';
 
 const implementNav = () => {
     let navigationItems = document.getElementsByClassName("navigation");

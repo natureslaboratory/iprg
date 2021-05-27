@@ -1,54 +1,6 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/classes/Icon.js":
-/*!*****************************!*\
-  !*** ./src/classes/Icon.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Icon)\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nvar Icon = /*#__PURE__*/function () {\n  // HTMLElement\n  function Icon(icon) {\n    _classCallCheck(this, Icon);\n\n    _defineProperty(this, \"node\", void 0);\n\n    this.node = icon;\n    this.show = this.show.bind(this);\n    this.hide = this.hide.bind(this);\n  } // Public Null\n\n\n  _createClass(Icon, [{\n    key: \"show\",\n    value: function show() {\n      if (this.node.classList.contains(\"hide\")) {\n        this.node.classList.remove(\"hide\");\n      }\n    } // Public Null\n\n  }, {\n    key: \"hide\",\n    value: function hide() {\n      if (!this.node.classList.contains(\"hide\")) {\n        this.node.classList.add(\"hide\");\n      }\n    }\n  }]);\n\n  return Icon;\n}();\n\n\n\n//# sourceURL=webpack://iprgconference/./src/classes/Icon.js?");
-
-/***/ }),
-
-/***/ "./src/classes/Link.js":
-/*!*****************************!*\
-  !*** ./src/classes/Link.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"TopNavLink\": () => (/* binding */ TopNavLink),\n/* harmony export */   \"HamburgerNavLink\": () => (/* binding */ HamburgerNavLink)\n/* harmony export */ });\n/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Icon */ \"./src/classes/Icon.js\");\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _iterableToArray(iter) { if (typeof Symbol !== \"undefined\" && Symbol.iterator in Object(iter)) return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\nvar Link = /*#__PURE__*/function () {\n  // HTMLElement\n  function Link(link) {\n    var labelMappings = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n\n    _classCallCheck(this, Link);\n\n    _defineProperty(this, \"node\", void 0);\n\n    _defineProperty(this, \"labelMappings\", {});\n\n    this.node = link;\n    this.labelMappings = labelMappings;\n    this.hide = this.hide.bind(this);\n    this.show = this.show.bind(this);\n    this.isHidden = this.isHidden.bind(this);\n  } // Public Null\n\n\n  _createClass(Link, [{\n    key: \"hide\",\n    value: function hide() {\n      if (!this.node.classList.contains(\"hide\")) {\n        this.node.classList.add(\"hide\");\n      }\n    } // Public Null\n\n  }, {\n    key: \"show\",\n    value: function show() {\n      if (this.node.classList.contains(\"hide\")) {\n        this.node.classList.remove(\"hide\");\n      }\n    } // Public Bool\n\n  }, {\n    key: \"isHidden\",\n    value: function isHidden() {\n      if (this.node.classList.contains(\"hide\")) {\n        return true;\n      }\n\n      return false;\n    }\n  }]);\n\n  return Link;\n}();\n\nvar TopNavLink = /*#__PURE__*/function (_Link) {\n  _inherits(TopNavLink, _Link);\n\n  var _super = _createSuper(TopNavLink);\n\n  function TopNavLink(link) {\n    var _this;\n\n    var labelMappings = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n\n    _classCallCheck(this, TopNavLink);\n\n    _this = _super.call(this, link, labelMappings);\n\n    _defineProperty(_assertThisInitialized(_this), \"link\", void 0);\n\n    _defineProperty(_assertThisInitialized(_this), \"hasChildren\", false);\n\n    _defineProperty(_assertThisInitialized(_this), \"icon\", void 0);\n\n    _defineProperty(_assertThisInitialized(_this), \"childLinksNode\", void 0);\n\n    _defineProperty(_assertThisInitialized(_this), \"childLinks\", []);\n\n    for (var i = 0; i < _this.node.children.length; i++) {\n      var child = _this.node.children[i]; // child is HTMLElement\n\n      if (child.classList.contains(\"navLink\")) {\n        _this.link = child;\n      } else if (child.classList.contains(\"navChildItems\")) {\n        _this.childLinksNode = child;\n        _this.hasChildren = true;\n      } else if (child.classList.contains(\"linkIcon\")) {\n        _this.icon = new _Icon__WEBPACK_IMPORTED_MODULE_0__.default(child);\n      }\n    }\n\n    if (_this.hasChildren) {\n      for (var _i = 0; _i < _this.childLinksNode.children.length; _i++) {\n        var _link = _this.childLinksNode.children[_i];\n        _this.childLinks = [].concat(_toConsumableArray(_this.childLinks), [_link]);\n      }\n    } // create new li in .navChildItems at beginning of list\n    // append a element from topNav to new li\n    // append new div to original .navItem\n\n\n    if (_this.hasChildren) {// this.formatLink();\n    }\n\n    return _this;\n  }\n\n  _createClass(TopNavLink, [{\n    key: \"width\",\n    get: // HTMLElement\n    // Bool\n    // Icon\n    // HTMLElement\n    // Array<HTMLElement>\n    // Public Int\n    function get() {\n      var linkRect = this.node.getBoundingClientRect();\n      return linkRect.right - linkRect.left;\n    }\n  }, {\n    key: \"formatLink\",\n    value: function formatLink() {\n      var mainLinkInnerHtml = this.link.innerHTML.trim();\n      var label = \"Label\";\n\n      for (var title in this.labelMappings) {\n        if (Object.hasOwnProperty.call(this.labelMappings, title)) {\n          if (title == mainLinkInnerHtml) {\n            label = this.labelMappings[title];\n          }\n        }\n      }\n\n      var newNavChildItem = document.createElement(\"LI\");\n      newNavChildItem.classList.add(\"navChildItem\");\n      this.childLinksNode.prepend(newNavChildItem);\n      newNavChildItem.appendChild(this.link);\n      var newLabel = document.createElement(\"DIV\");\n      newLabel.innerHTML = label;\n      newLabel.classList.add(\"navLink\");\n      newLabel.classList.add(\"navLabel\");\n      this.node.prepend(newLabel);\n    }\n  }, {\n    key: \"toggle\",\n    value: function toggle() {\n      if (this.childLinksNode.classList.contains(\"hide\")) {\n        this.open();\n      } else {\n        this.close();\n      }\n    }\n  }, {\n    key: \"open\",\n    value: function open() {\n      var linkBox = this.node.getBoundingClientRect();\n      var height = linkBox.bottom - linkBox.top;\n      this.childLinksNode.style.top = \"\".concat(height, \"px\");\n      this.childLinksNode.classList.remove(\"hide\");\n      this.node.classList.add(\"open\");\n    }\n  }, {\n    key: \"close\",\n    value: function close() {\n      if (this.childLinksNode) {\n        this.childLinksNode.classList.add(\"hide\");\n        this.node.classList.remove(\"open\");\n      }\n    }\n  }]);\n\n  return TopNavLink;\n}(Link);\nvar HamburgerNavLink = /*#__PURE__*/function (_Link2) {\n  _inherits(HamburgerNavLink, _Link2);\n\n  var _super2 = _createSuper(HamburgerNavLink);\n\n  function HamburgerNavLink(link) {\n    var _this2;\n\n    _classCallCheck(this, HamburgerNavLink);\n\n    _this2 = _super2.call(this, link);\n\n    _defineProperty(_assertThisInitialized(_this2), \"link\", void 0);\n\n    _defineProperty(_assertThisInitialized(_this2), \"hasChildren\", false);\n\n    _defineProperty(_assertThisInitialized(_this2), \"desktopIcon\", void 0);\n\n    _defineProperty(_assertThisInitialized(_this2), \"mobileIcon\", void 0);\n\n    _defineProperty(_assertThisInitialized(_this2), \"childLinksNode\", void 0);\n\n    _defineProperty(_assertThisInitialized(_this2), \"childLinks\", []);\n\n    for (var i = 0; i < _this2.node.children.length; i++) {\n      var child = _this2.node.children[i];\n\n      if (child.classList.contains(\"hamburgerLink\")) {\n        _this2.link = child;\n\n        for (var j = 0; j < child.children.length; j++) {\n          var subChild = child.children[j];\n\n          if (subChild.classList.contains(\"linkIcon\")) {\n            _this2.hasChildren = true;\n            _this2.desktopIcon = new _Icon__WEBPACK_IMPORTED_MODULE_0__.default(subChild);\n          }\n        }\n      } else if (child.classList.contains(\"hamburgerChildItems\")) {\n        _this2.childLinksNode = child;\n      } else if (child.classList.contains(\"linkIcon\")) {\n        _this2.mobileIcon = new _Icon__WEBPACK_IMPORTED_MODULE_0__.default(child);\n\n        _this2.mobileIcon.hide();\n      }\n    }\n\n    if (_this2.hasChildren) {\n      for (var _i2 = 0; _i2 < _this2.childLinksNode.children.length; _i2++) {\n        var _link2 = _this2.childLinksNode.children[_i2];\n        _this2.childLinks = [].concat(_toConsumableArray(_this2.childLinks), [_link2]);\n      }\n    }\n\n    return _this2;\n  }\n\n  _createClass(HamburgerNavLink, [{\n    key: \"isMenuOpen\",\n    get: // HTMLElement\n    // Bool\n    // Icon\n    // Icon\n    // HTMLElement\n    // Array<HTMLElement>\n    function get() {\n      if (this.childLinksNode.style.maxHeight) {\n        return true;\n      }\n\n      return false;\n    }\n  }, {\n    key: \"toggle\",\n    value: function toggle() {\n      if (this.isMenuOpen) {\n        // this.mobileIcon.node.classList.remove(\"spin\");\n        this.close();\n      } else {\n        // this.mobileIcon.node.classList.add(\"spin\");\n        this.open();\n      }\n    }\n  }, {\n    key: \"close\",\n    value: function close() {\n      if (this.childLinksNode) {\n        this.childLinksNode.style.maxHeight = null;\n      }\n    }\n  }, {\n    key: \"open\",\n    value: function open() {\n      if (this.childLinksNode) {\n        this.childLinksNode.style.maxHeight = this.childLinksNode.scrollHeight + \"px\";\n      }\n    }\n  }]);\n\n  return HamburgerNavLink;\n}(Link);\n\n//# sourceURL=webpack://iprgconference/./src/classes/Link.js?");
-
-/***/ }),
-
-/***/ "./src/classes/NavMenu.js":
-/*!********************************!*\
-  !*** ./src/classes/NavMenu.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Hamburger\": () => (/* binding */ Hamburger),\n/* harmony export */   \"TopNav\": () => (/* binding */ TopNav)\n/* harmony export */ });\n/* harmony import */ var _Link__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Link */ \"./src/classes/Link.js\");\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _iterableToArray(iter) { if (typeof Symbol !== \"undefined\" && Symbol.iterator in Object(iter)) return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\nvar NavMenu = /*#__PURE__*/function () {\n  // HTMLElement\n  // Array<Link>\n  function NavMenu(menu) {\n    var labelMappings = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n\n    _classCallCheck(this, NavMenu);\n\n    _defineProperty(this, \"node\", void 0);\n\n    _defineProperty(this, \"links\", []);\n\n    _defineProperty(this, \"labelMappings\", {});\n\n    this.node = menu;\n    this.labelMappings = labelMappings;\n    this.hideAll = this.hideAll.bind(this);\n    this.showAll = this.showAll.bind(this);\n  } // Public Null\n\n\n  _createClass(NavMenu, [{\n    key: \"hideAll\",\n    value: function hideAll() {\n      this.links.forEach(function (link) {\n        return link.hide();\n      });\n    } // Public Null\n\n  }, {\n    key: \"showAll\",\n    value: function showAll() {\n      this.links.forEach(function (link) {\n        return link.show();\n      });\n    }\n  }]);\n\n  return NavMenu;\n}();\n\nvar Hamburger = /*#__PURE__*/function (_NavMenu) {\n  _inherits(Hamburger, _NavMenu);\n\n  var _super = _createSuper(Hamburger);\n\n  function Hamburger(menu) {\n    var _this;\n\n    _classCallCheck(this, Hamburger);\n\n    _this = _super.call(this, menu);\n\n    for (var i = 0; i < _this.node.children.length; i++) {\n      var link = _this.node.children[i];\n      var newLink = new _Link__WEBPACK_IMPORTED_MODULE_0__.HamburgerNavLink(link);\n      _this.links = [].concat(_toConsumableArray(_this.links), [newLink]);\n    }\n\n    _this.addEventListeners();\n\n    _this.show = _this.show.bind(_assertThisInitialized(_this));\n    _this.hide = _this.hide.bind(_assertThisInitialized(_this));\n    _this.toMobile = _this.toMobile.bind(_assertThisInitialized(_this));\n    _this.toDesktop = _this.toDesktop.bind(_assertThisInitialized(_this));\n    _this.showOne = _this.showOne.bind(_assertThisInitialized(_this));\n    return _this;\n  } // Public Null\n\n\n  _createClass(Hamburger, [{\n    key: \"isMobile\",\n    get: // Public Bool\n    function get() {\n      if (this.node.classList.contains(\"mobile\")) {\n        return true;\n      }\n\n      return false;\n    } // Public Bool\n\n  }, {\n    key: \"isHidden\",\n    get: function get() {\n      if (this.node.classList.contains(\"hide\")) {\n        return true;\n      }\n\n      return false;\n    }\n  }, {\n    key: \"show\",\n    value: function show() {\n      this.node.classList.remove(\"hide\");\n    } // Public Null\n\n  }, {\n    key: \"hide\",\n    value: function hide() {\n      var _this2 = this;\n\n      this.node.classList.add(\"hide\");\n      setTimeout(function () {\n        _this2.closeAllMenus();\n      }, 150);\n    } // Public Null\n\n  }, {\n    key: \"toMobile\",\n    value: function toMobile() {\n      this.node.classList.add(\"mobile\");\n      this.links.forEach(function (link) {\n        if (link.desktopIcon) {\n          link.desktopIcon.hide();\n        }\n\n        if (link.mobileIcon) {\n          link.mobileIcon.show();\n        }\n      });\n    } // Public Null\n\n  }, {\n    key: \"toDesktop\",\n    value: function toDesktop() {\n      this.node.classList.remove(\"mobile\");\n      this.links.forEach(function (link) {\n        if (link.desktopIcon) {\n          link.desktopIcon.show();\n        }\n\n        if (link.mobileIcon) {\n          link.mobileIcon.hide();\n        }\n      });\n    } // Public Null\n\n  }, {\n    key: \"showOne\",\n    value: function showOne() {\n      for (var i = this.links.length - 1; i >= 0; i--) {\n        var link = this.links[i];\n\n        if (link.isHidden()) {\n          link.show();\n          break;\n        }\n      }\n    }\n  }, {\n    key: \"handleLinks\",\n    value: function handleLinks(link) {\n      console.log(link.isMenuOpen);\n\n      if (!link.isMenuOpen) {\n        this.closeAllMenus();\n        link.open();\n      } else {\n        link.close();\n      }\n    }\n  }, {\n    key: \"addEventListeners\",\n    value: function addEventListeners() {\n      var _this3 = this;\n\n      this.links.forEach(function (link) {\n        if (link.hasChildren) {\n          link.node.addEventListener(\"click\", function () {\n            console.log(\"click\");\n\n            _this3.handleLinks(link);\n          });\n        }\n      });\n    }\n  }, {\n    key: \"closeAllMenus\",\n    value: function closeAllMenus() {\n      this.links.forEach(function (link) {\n        link.close();\n      });\n    }\n  }]);\n\n  return Hamburger;\n}(NavMenu);\nvar TopNav = /*#__PURE__*/function (_NavMenu2) {\n  _inherits(TopNav, _NavMenu2);\n\n  var _super2 = _createSuper(TopNav);\n\n  function TopNav(menu) {\n    var _this4;\n\n    var labelMappings = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n\n    _classCallCheck(this, TopNav);\n\n    _this4 = _super2.call(this, menu, labelMappings);\n\n    for (var i = 0; i < _this4.node.children.length; i++) {\n      var link = _this4.node.children[i];\n      var newLink = new _Link__WEBPACK_IMPORTED_MODULE_0__.TopNavLink(link, _this4.labelMappings, _this4.closeAllMenus);\n      _this4.links = [].concat(_toConsumableArray(_this4.links), [newLink]);\n    }\n\n    _this4.hideOne = _this4.hideOne.bind(_assertThisInitialized(_this4));\n    _this4.closeAllMenus = _this4.closeAllMenus.bind(_assertThisInitialized(_this4));\n\n    _this4.addEventListeners();\n\n    return _this4;\n  } // Public Null\n\n\n  _createClass(TopNav, [{\n    key: \"totalWidth\",\n    get: // Public Int\n    function get() {\n      var width = 0;\n      this.links.forEach(function (link) {\n        width += link.width;\n      });\n      return width;\n    }\n  }, {\n    key: \"hideOne\",\n    value: function hideOne() {\n      for (var i = this.links.length - 1; i >= 0; i--) {\n        var link = this.links[i];\n\n        if (!link.isHidden()) {\n          link.hide();\n          break;\n        }\n      }\n    }\n  }, {\n    key: \"handleLinks\",\n    value: function handleLinks(link) {\n      if (link.childLinksNode.classList.contains(\"hide\")) {\n        this.closeAllMenus();\n        link.open();\n      } else {\n        link.close();\n      }\n    }\n  }, {\n    key: \"addEventListeners\",\n    value: function addEventListeners() {\n      var _this5 = this;\n\n      this.links.forEach(function (link) {\n        if (link.hasChildren) {\n          link.node.addEventListener(\"click\", function () {\n            _this5.handleLinks(link);\n          });\n        }\n      });\n    }\n  }, {\n    key: \"closeAllMenus\",\n    value: function closeAllMenus() {\n      this.links.forEach(function (link) {\n        link.close();\n      });\n    }\n  }]);\n\n  return TopNav;\n}(NavMenu);\n\n//# sourceURL=webpack://iprgconference/./src/classes/NavMenu.js?");
-
-/***/ }),
-
-/***/ "./src/classes/Navigation.js":
-/*!***********************************!*\
-  !*** ./src/classes/Navigation.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Navigation)\n/* harmony export */ });\n/* harmony import */ var _NavMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NavMenu */ \"./src/classes/NavMenu.js\");\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _iterableToArray(iter) { if (typeof Symbol !== \"undefined\" && Symbol.iterator in Object(iter)) return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\nvar Navigation = /*#__PURE__*/function () {\n  // HTMLElement\n  // TopNav\n  // Hamburger\n  // HTMLElement\n  // HTMLElement\n  // Object\n  function Navigation(nav) {\n    var labelMapping = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};\n\n    _classCallCheck(this, Navigation);\n\n    _defineProperty(this, \"fullNav\", void 0);\n\n    _defineProperty(this, \"topNav\", void 0);\n\n    _defineProperty(this, \"hamburger\", void 0);\n\n    _defineProperty(this, \"hamburgerButton\", void 0);\n\n    _defineProperty(this, \"hamburgerWrapper\", void 0);\n\n    _defineProperty(this, \"labelMappings\", void 0);\n\n    // HTMLElement nav\n    this.getNavItems = this.getNavItems.bind(this);\n    this.handleResize = this.handleResize.bind(this);\n    this.moveAllToHamburger = this.moveAllToHamburger.bind(this);\n    this.moveAllToNav = this.moveAllToNav.bind(this);\n    this.moveOneToHamburger = this.moveOneToHamburger.bind(this);\n    this.isNavWrapped = this.isNavWrapped.bind(this);\n    this.handleMouseOverHamburger = this.handleMouseOverHamburger.bind(this);\n    this.addEventListeners = this.addEventListeners.bind(this);\n    this.labelMappings = labelMapping;\n    this.fullNav = nav;\n    this.getNavItems();\n    this.addEventListeners();\n  } // Private Null\n\n\n  _createClass(Navigation, [{\n    key: \"getNavItems\",\n    value: function getNavItems() {\n      for (var i = 0; i < this.fullNav.children.length; i++) {\n        var child = this.fullNav.children[i]; // child is HTMLElement\n\n        if (child.classList.contains(\"topNav\")) {\n          this.topNav = new _NavMenu__WEBPACK_IMPORTED_MODULE_0__.TopNav(child, this.labelMappings);\n        } else if (child.classList.contains(\"hamburgerWrapper\")) {\n          this.hamburgerWrapper = child;\n        }\n      }\n\n      if (!this.topNav || !this.hamburgerWrapper) {\n        throw new Error(\"Invalid Navigation Structure\");\n      }\n\n      for (var _i = 0; _i < this.hamburgerWrapper.children.length; _i++) {\n        var _child = this.hamburgerWrapper.children[_i]; // child is HTMLElement\n\n        if (_child.classList.contains(\"hamburgerButton\")) {\n          this.hamburgerButton = _child;\n        } else if (_child.classList.contains(\"hamburger\")) {\n          this.hamburger = new _NavMenu__WEBPACK_IMPORTED_MODULE_0__.Hamburger(_child);\n        }\n      }\n\n      if (!this.hamburgerButton || !this.hamburger) {\n        throw new Error(\"Invalid Hamburger Navigation Structure\");\n      }\n    } // Public Null\n\n  }, {\n    key: \"handleResize\",\n    value: function handleResize() {\n      // for mobile\n      if (document.documentElement.clientWidth <= 768) {\n        this.moveAllToHamburger(); // this.hamburger.toMobile();\n      } // for desktop\n      else {\n          this.moveAllToNav();\n          this.hamburger.toDesktop();\n\n          while (this.isNavWrapped()) {\n            this.moveOneToHamburger();\n          }\n        }\n    } // Private Null\n\n  }, {\n    key: \"moveAllToHamburger\",\n    value: function moveAllToHamburger() {\n      this.hamburger.showAll();\n      this.topNav.hideAll();\n    } // Private Null\n\n  }, {\n    key: \"moveAllToNav\",\n    value: function moveAllToNav() {\n      this.hamburgerWrapper.classList.add(\"hide\");\n      this.hamburger.hideAll();\n      this.topNav.showAll();\n    } // Private Null\n\n  }, {\n    key: \"moveOneToHamburger\",\n    value: function moveOneToHamburger() {\n      this.hamburgerWrapper.classList.remove(\"hide\");\n      this.topNav.hideOne();\n      this.hamburger.showOne();\n    } // Private Bool\n\n  }, {\n    key: \"isNavWrapped\",\n    value: function isNavWrapped() {\n      var navigationRect = this.fullNav.getBoundingClientRect();\n      var navWidth = navigationRect.right - navigationRect.left;\n      var linksWidth = this.topNav.totalWidth; // 50 is icon width, refactor later to use actual icon width\n\n      if (linksWidth > navWidth - 50) {\n        return true;\n      }\n\n      return false;\n    } // Private HTMLElement\n\n  }, {\n    key: \"getParentIfTagMatchesNode\",\n    value: function getParentIfTagMatchesNode(node, excludedTag) {\n      // HTMLElement node, String excludedTag\n      if (node.tagName == excludedTag) {\n        return node.parentElement;\n      } else {\n        return node;\n      }\n    } // Private Null\n\n  }, {\n    key: \"handleMouseOverHamburger\",\n    value: function handleMouseOverHamburger(link) {\n      // Link link\n      if (link.hasChildren) {\n        var linkBox = link.node.getBoundingClientRect();\n\n        if (!this.hamburger.isMobile) {\n          var width = linkBox.right - linkBox.left;\n          link.childLinksNode.style.right = \"\".concat(width, \"px\");\n          link.childLinksNode.classList.remove(\"hide\");\n        }\n      }\n    } // Private Null\n\n  }, {\n    key: \"handleMouseLeaveHamburger\",\n    value: function handleMouseLeaveHamburger(link) {\n      // Link link\n      if (link.hasChildren) {\n        link.childLinksNode.style.right = \"0px\";\n        link.childLinksNode.classList.add(\"hide\");\n      }\n    } // Private Null\n\n  }, {\n    key: \"handleMouseOverNav\",\n    value: function handleMouseOverNav(link) {\n      // Link link\n      if (link.hasChildren) {\n        var linkBox = link.node.getBoundingClientRect();\n        var height = linkBox.bottom - linkBox.top;\n        link.childLinksNode.style.top = \"\".concat(height, \"px\");\n        link.childLinksNode.classList.remove(\"hide\");\n      }\n    } // Private Null\n\n  }, {\n    key: \"handleMouseLeaveNav\",\n    value: function handleMouseLeaveNav(link) {\n      // Link link\n      if (link.hasChildren) {\n        link.childLinksNode.classList.add(\"hide\");\n      }\n    } // Private Null\n\n  }, {\n    key: \"handleHamburgerButton\",\n    value: function handleHamburgerButton() {\n      // Hamburger hamburger\n      if (this.hamburger.isHidden) {\n        this.hamburger.show();\n      } else {\n        this.hamburger.hide();\n      }\n    } // Private Null\n\n  }, {\n    key: \"handleExpandSubMenuButton\",\n    value: function handleExpandSubMenuButton(link) {\n      // Link link\n      if (link.childLinksNode.style.maxHeight) {\n        link.mobileIcon.node.classList.remove(\"spin\");\n        link.childLinksNode.style.maxHeight = null;\n      } else {\n        link.mobileIcon.node.classList.add(\"spin\");\n        link.childLinksNode.style.maxHeight = link.childLinksNode.scrollHeight + \"px\";\n      }\n    }\n  }, {\n    key: \"getParents\",\n    value: function getParents(elem) {\n      if (elem.tagName == \"HTML\") {\n        return [elem];\n      }\n\n      return [elem.parentElement].concat(_toConsumableArray(this.getParents(elem.parentElement)));\n    }\n  }, {\n    key: \"hasParent\",\n    value: function hasParent(elem, parentElement) {\n      var parents = this.getParents(elem);\n\n      for (var i = 0; i < parents.length; i++) {\n        var parent = parents[i];\n\n        if (parent == parentElement) {\n          return true;\n        }\n      }\n\n      return false;\n    } // Private Null\n\n  }, {\n    key: \"handlePageClick\",\n    value: function handlePageClick(e) {\n      if (!this.hasParent(e.target, this.hamburgerWrapper)) {\n        this.hamburger.hide();\n      }\n\n      if (!this.hasParent(e.target, this.topNav.node)) {\n        this.topNav.closeAllMenus();\n      }\n    } // Private Null\n\n  }, {\n    key: \"show\",\n    value: function show() {\n      this.fullNav.classList.add(\"show\");\n    } // Private Null\n\n  }, {\n    key: \"addEventListeners\",\n    value: function addEventListeners() {\n      var _this = this;\n\n      this.hamburger.links.forEach(function (link) {// link.node.addEventListener(\"click\", () => {\n        //     this.handleMouseOverHamburger(link);\n        // })\n        // link.node.addEventListener(\"mouseleave\", () => {\n        //     this.handleMouseLeaveHamburger(link);\n        // })\n        // if (link.hasChildren) {\n        //     link.mobileIcon.node.addEventListener(\"click\", () => {\n        //         this.handleExpandSubMenuButton(link);\n        //     })\n        // }\n      }); // this.topNav.links.forEach(link => {\n      //     link.node.addEventListener(\"click\", () => {\n      //         this.handleMouseOverNav(link)\n      //     })\n      // link.node.addEventListener(\"mouseleave\", () => {\n      //     this.handleMouseLeaveNav(link)\n      // })\n      // })\n\n      this.hamburgerButton.addEventListener(\"click\", function (e) {\n        _this.handleHamburgerButton(_this.hamburger);\n      });\n      window.addEventListener(\"click\", function (e) {\n        _this.handlePageClick(e);\n      });\n    }\n  }]);\n\n  return Navigation;\n}();\n\n\n\n//# sourceURL=webpack://iprgconference/./src/classes/Navigation.js?");
-
-/***/ }),
 
 /***/ "./src/dynamicNav.js":
 /*!***************************!*\
@@ -56,17 +8,43 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _classes_Navigation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes/Navigation.js */ \"./src/classes/Navigation.js\");\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _iterableToArray(iter) { if (typeof Symbol !== \"undefined\" && Symbol.iterator in Object(iter)) return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\n\n\nvar implementNav = function implementNav() {\n  var navigationItems = document.getElementsByClassName(\"navigation\");\n  var navigationArray = [];\n\n  for (var i = 0; i < navigationItems.length; i++) {\n    var nav = navigationItems[i];\n    var navigation = new _classes_Navigation_js__WEBPACK_IMPORTED_MODULE_0__.default(nav, {\n      \"Abstract Submission\": \"Abstract\",\n      \"Scientific Committee\": \"Science\"\n    });\n    navigationArray = [].concat(_toConsumableArray(navigationArray), [navigation]);\n  }\n\n  if (navigationArray) {\n    window.onload = function () {\n      navigationArray.forEach(function (nav) {\n        nav.handleResize();\n      });\n      setTimeout(function () {\n        navigationArray.forEach(function (nav) {\n          nav.show();\n        });\n      }, 20);\n    };\n\n    window.addEventListener(\"resize\", function () {\n      navigationArray.forEach(function (nav) {\n        nav.handleResize();\n      });\n    });\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (implementNav);\n\n//# sourceURL=webpack://iprgconference/./src/dynamicNav.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _classes_Navigation_ts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes/Navigation.ts */ "./src/classes/Navigation.ts");
+/* harmony import */ var _classes_Navigation_ts__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_classes_Navigation_ts__WEBPACK_IMPORTED_MODULE_0__);
 
-/***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+const implementNav = () => {
+    let navigationItems = document.getElementsByClassName("navigation");
+    let navigationArray = [];
+    for (let i = 0; i < navigationItems.length; i++) {
+        const nav = navigationItems[i];
+        let navigation = new (_classes_Navigation_ts__WEBPACK_IMPORTED_MODULE_0___default())(nav, {"Abstract Submission": "Abstract", "Scientific Committee": "Science"});
+        navigationArray = [...navigationArray, navigation];
+    }
+    if (navigationArray) {
+        window.onload = () => {
+            navigationArray.forEach(nav => {
+                nav.handleResize()
+            })
+            setTimeout(() => {
+                navigationArray.forEach(nav => {
+                    nav.show();
+                })
+            }, 20)
+        };
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dynamicNav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dynamicNav */ \"./src/dynamicNav.js\");\n/* harmony import */ var _previewImage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./previewImage */ \"./src/previewImage.js\");\n/* harmony import */ var _wordCounter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./wordCounter */ \"./src/wordCounter.js\");\n\n\n\n(0,_dynamicNav__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_previewImage__WEBPACK_IMPORTED_MODULE_1__.implementPreviewImage)();\n(0,_wordCounter__WEBPACK_IMPORTED_MODULE_2__.implementWordCount)();\n\n//# sourceURL=webpack://iprgconference/./src/index.js?");
+        window.addEventListener("resize", () => {
+            navigationArray.forEach(nav => {
+                nav.handleResize();
+            })
+        });
+    }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (implementNav);
 
 /***/ }),
 
@@ -76,7 +54,110 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dyn
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"implementPreviewImage\": () => (/* binding */ implementPreviewImage)\n/* harmony export */ });\nvar previewImage = function previewImage(e, targetElement) {\n  var reader = new FileReader();\n\n  reader.onload = function () {\n    var output = targetElement;\n    output.src = reader.result;\n  };\n\n  if (e.target.files[0]) {\n    showImageHideChoose();\n    reader.readAsDataURL(e.target.files[0]);\n  } else {\n    showChooseHideImage();\n  }\n};\n\nvar overlayOn = function overlayOn() {\n  var overlay = document.getElementById(\"image-overlay\");\n  var deleteButton = document.getElementById(\"delete-button\");\n\n  if (overlay.classList.contains(\"hide\")) {\n    overlay.classList.remove(\"hide\");\n  }\n\n  if (deleteButton.classList.contains(\"hide\")) {\n    deleteButton.classList.remove(\"hide\");\n  }\n};\n\nvar overlayOff = function overlayOff() {\n  var overlay = document.getElementById(\"image-overlay\");\n  var deleteButton = document.getElementById(\"delete-button\");\n\n  if (!overlay.classList.contains(\"hide\")) {\n    overlay.classList.add(\"hide\");\n  }\n\n  if (!deleteButton.classList.contains(\"hide\")) {\n    deleteButton.classList.add(\"hide\");\n  }\n};\n\nvar showChooseHideImage = function showChooseHideImage() {\n  document.getElementById(\"image-button\").classList.remove(\"hide\");\n  document.getElementById(\"preview-div\").classList.add(\"hide\");\n};\n\nvar showImageHideChoose = function showImageHideChoose() {\n  document.getElementById(\"image-button\").classList.add(\"hide\");\n  document.getElementById(\"preview-div\").classList.remove(\"hide\");\n};\n\nvar implementPreviewImage = function implementPreviewImage() {\n  var element = document.getElementsByClassName(\"image-upload\")[0];\n  var imageToUpload = document.getElementById(\"image-to-upload\");\n\n  if (imageToUpload) {\n    element.addEventListener('change', function (e) {\n      return previewImage(e, document.getElementById(\"image-to-upload\"));\n    });\n  }\n\n  var addButton = document.getElementById(\"image-button\");\n\n  if (addButton) {\n    addButton.addEventListener('click', function (e) {\n      e.preventDefault();\n      document.getElementsByClassName(\"image-upload\")[0].click();\n    });\n  }\n\n  var deleteButton = document.getElementById(\"delete-button\");\n\n  if (deleteButton) {\n    deleteButton.addEventListener('click', function (e) {\n      e.preventDefault();\n      var imageUpload = document.getElementsByClassName(\"image-upload\")[0];\n      imageUpload.value = null;\n      document.getElementById(\"image-button\").classList.remove(\"hide\");\n      document.getElementById(\"preview-div\").classList.add(\"hide\");\n    });\n  } // To show delete option\n\n\n  var previewDiv = document.getElementById(\"preview-div\");\n\n  if (previewDiv) {\n    previewDiv.addEventListener('mouseover', function (e) {\n      overlayOn();\n    });\n    previewDiv.addEventListener('mouseleave', function (e) {\n      overlayOff();\n    }); // For mobile users\n\n    document.getElementById(\"preview-div\").addEventListener('touchstart', function (e) {\n      overlayOn();\n    }, {\n      passive: true\n    });\n    document.addEventListener('touchstart', function (e) {\n      if (!hasParent(e.target, document.getElementById(\"preview-div\"))) {\n        overlayOff();\n      }\n    });\n  }\n};\n\n//# sourceURL=webpack://iprgconference/./src/previewImage.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "implementPreviewImage": () => (/* binding */ implementPreviewImage)
+/* harmony export */ });
+const previewImage = (e, targetElement) => {
+    let reader = new FileReader();
+
+    reader.onload = () => {
+        let output = targetElement;
+        output.src = reader.result;
+    }
+    if (e.target.files[0]) {
+        showImageHideChoose()
+        reader.readAsDataURL(e.target.files[0]);
+    } else {
+        showChooseHideImage()
+    }
+}
+
+const overlayOn = () => {
+    let overlay = document.getElementById("image-overlay");
+    let deleteButton = document.getElementById("delete-button");
+    if (overlay.classList.contains("hide")) {
+        overlay.classList.remove("hide");
+    }
+    if (deleteButton.classList.contains("hide")) {
+        deleteButton.classList.remove("hide");
+    }
+}
+
+const overlayOff = () => {
+    let overlay = document.getElementById("image-overlay");
+    let deleteButton = document.getElementById("delete-button");
+    if (!overlay.classList.contains("hide")) {
+        overlay.classList.add("hide");
+    }
+    if (!deleteButton.classList.contains("hide")) {
+        deleteButton.classList.add("hide");
+    }
+}
+
+const showChooseHideImage = () => {
+    document.getElementById("image-button").classList.remove("hide");
+    document.getElementById("preview-div").classList.add("hide");
+}
+
+const showImageHideChoose = () => {
+    document.getElementById("image-button").classList.add("hide");
+    document.getElementById("preview-div").classList.remove("hide");
+}
+
+const implementPreviewImage = () => {
+    let element = document.getElementsByClassName("image-upload")[0];
+
+    let imageToUpload = document.getElementById("image-to-upload");
+    if (imageToUpload) {
+        element.addEventListener('change', (e) => previewImage(e, document.getElementById("image-to-upload")));
+    }
+
+    let addButton = document.getElementById("image-button");
+    if (addButton) {
+        addButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementsByClassName("image-upload")[0].click();
+        })
+    }
+
+    let deleteButton = document.getElementById("delete-button");
+    if (deleteButton) {
+        deleteButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            let imageUpload = document.getElementsByClassName("image-upload")[0];
+            imageUpload.value = null;
+            document.getElementById("image-button").classList.remove("hide");
+            document.getElementById("preview-div").classList.add("hide");
+        })
+    }
+
+    // To show delete option
+
+    let previewDiv = document.getElementById("preview-div");
+    if (previewDiv) {
+        previewDiv.addEventListener('mouseover', (e) => {
+            overlayOn();
+        })
+
+        previewDiv.addEventListener('mouseleave', (e) => {
+            overlayOff();
+        })
+        // For mobile users
+
+        document.getElementById("preview-div").addEventListener('touchstart', (e) => {
+            overlayOn();
+        }, { passive: true })
+
+        document.addEventListener('touchstart', (e) => {
+            if (!hasParent(e.target, document.getElementById("preview-div"))) {
+                overlayOff();
+            }
+        })
+    }
+}
+
+
 
 /***/ }),
 
@@ -86,7 +167,1022 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"implementWordCount\": () => (/* binding */ implementWordCount)\n/* harmony export */ });\n// Helper functions\nvar getMaxWordCount = function getMaxWordCount(element) {\n  var classList = element.classList;\n\n  for (var index = 0; index < classList.length; index++) {\n    if (classList[index].includes(\"cw-\")) {\n      return parseInt(classList[index].split(\"-\")[1]);\n    }\n  }\n\n  return 500;\n};\n\nvar convertStringToArray = function convertStringToArray(str) {\n  return str.split(\" \");\n};\n\nvar sanitiseArray = function sanitiseArray(strArray) {\n  return strArray.filter(function (d) {\n    return d != \"\";\n  });\n};\n\nvar getCleanStringArray = function getCleanStringArray(str) {\n  var strArray = convertStringToArray(str);\n  return sanitiseArray(strArray);\n};\n\nvar isStringWithinWordCount = function isStringWithinWordCount(str, maxCount) {\n  var cleanStrArray = getCleanStringArray(str);\n  var count = cleanStrArray.length;\n  return count <= maxCount;\n};\n\nvar getCountElement = function getCountElement(counterWrapper) {\n  var children = counterWrapper.children;\n\n  for (var index = 0; index < children.length; index++) {\n    var child = children[index];\n\n    if (child.classList.contains(\"count\")) {\n      return child;\n    }\n  }\n};\n\nvar trimStringToMaxCount = function trimStringToMaxCount(str, maxCount) {\n  var cleanStrArray = getCleanStringArray(strArray);\n  var trimmedStrArray = cleanStrArray.slice(0, maxCount);\n  var newStr = trimmedStrArray.join(\" \");\n  return newStr;\n};\n\nvar createCounter = function createCounter(maxCount) {\n  var counterWrapper = document.createElement(\"p\");\n  counterWrapper.innerHTML = \"Word Count: <span class=\\\"count\\\">0</span>/<span>\".concat(maxCount, \"</span>\");\n  return counterWrapper;\n};\n\nvar insertCounter = function insertCounter(wordsCounted, counterWrapper) {\n  wordsCounted.parentNode.insertBefore(counterWrapper, wordsCounted.nextSibling);\n}; // End of helper functions\n\n\nvar updateWordCount = function updateWordCount(e, counterWrapper) {\n  var count = 0;\n  var maxCount = getMaxWordCount(e.target);\n\n  if (isStringWithinWordCount(e.target.value, maxCount)) {\n    count = getCleanStringArray(e.target.value).length;\n  } else {\n    e.target.value = trimStringToMaxCount(e.target.value, maxCount);\n    count = maxCount;\n  }\n\n  var countElement = getCountElement(counterWrapper);\n  countElement.innerHTML = count;\n};\n\nvar implementWordCount = function implementWordCount() {\n  var wordCountElements = document.getElementsByClassName(\"countWords\");\n\n  var _loop = function _loop(index) {\n    var wordsCounted = wordCountElements[index];\n\n    if (wordsCounted.tagName != \"TEXTAREA\") {\n      return \"continue\";\n    }\n\n    var maxCount = getMaxWordCount(wordsCounted);\n    var counterWrapper = createCounter(maxCount);\n    insertCounter(wordsCounted, counterWrapper);\n    wordsCounted.addEventListener('input', function (e) {\n      return updateWordCount(e, counterWrapper);\n    });\n  };\n\n  for (var index = 0; index < wordCountElements.length; index++) {\n    var _ret = _loop(index);\n\n    if (_ret === \"continue\") continue;\n  }\n};\n\n//# sourceURL=webpack://iprgconference/./src/wordCounter.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "implementWordCount": () => (/* binding */ implementWordCount)
+/* harmony export */ });
+// Helper functions
+
+const getMaxWordCount = (element) => {
+    let classList = element.classList;
+    for (let index = 0; index < classList.length; index++) {
+        if (classList[index].includes("cw-")) {
+            return parseInt(classList[index].split("-")[1]);
+        }
+    }
+
+    return 500;
+}
+
+const convertStringToArray = (str) => {
+    return str.split(" ");
+}
+
+const sanitiseArray = (strArray) => {
+    return strArray.filter(d => d != "");
+}
+
+const getCleanStringArray = (str) => {
+    const strArray = convertStringToArray(str);
+    return sanitiseArray(strArray);
+}
+
+const isStringWithinWordCount = (str, maxCount) => {
+    const cleanStrArray = getCleanStringArray(str);
+    let count = cleanStrArray.length;
+    return count <= maxCount;
+}
+
+const getCountElement = (counterWrapper) => {
+    const children = counterWrapper.children;
+    for (let index = 0; index < children.length; index++) {
+        const child = children[index];
+        if (child.classList.contains("count")) {
+            return child;
+        }
+    }
+}
+
+const trimStringToMaxCount = (str, maxCount) => {
+    const cleanStrArray = getCleanStringArray(strArray);
+    const trimmedStrArray = cleanStrArray.slice(0, maxCount);
+    const newStr = trimmedStrArray.join(" ");
+    return newStr;
+}
+
+const createCounter = (maxCount) => {
+    let counterWrapper = document.createElement("p");
+    counterWrapper.innerHTML = `Word Count: <span class="count">0</span>/<span>${maxCount}</span>`;
+    return counterWrapper
+}
+
+const insertCounter = (wordsCounted, counterWrapper) => {
+    wordsCounted.parentNode.insertBefore(counterWrapper, wordsCounted.nextSibling);
+}
+
+// End of helper functions
+
+
+const updateWordCount = (e, counterWrapper) => {
+    let count = 0;
+    let maxCount = getMaxWordCount(e.target);
+
+    if (isStringWithinWordCount(e.target.value, maxCount)) {
+        count = getCleanStringArray(e.target.value).length;
+    } else {
+        e.target.value = trimStringToMaxCount(e.target.value, maxCount);
+        count = maxCount;
+    }
+
+    let countElement = getCountElement(counterWrapper);
+    countElement.innerHTML = count;
+}
+
+const implementWordCount = () => {
+    let wordCountElements = document.getElementsByClassName("countWords");
+    
+    for (let index = 0; index < wordCountElements.length; index++) {
+        const wordsCounted = wordCountElements[index];
+        if (wordsCounted.tagName != "TEXTAREA") {
+            continue;
+        }
+
+        let maxCount = getMaxWordCount(wordsCounted);
+        let counterWrapper = createCounter(maxCount);
+        insertCounter(wordsCounted, counterWrapper);
+        
+        wordsCounted.addEventListener('input', (e) => updateWordCount(e, counterWrapper));
+    }
+}
+
+/***/ }),
+
+/***/ "./src/classes/Icon.ts":
+/*!*****************************!*\
+  !*** ./src/classes/Icon.ts ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var Icon = /** @class */ (function () {
+    function Icon(icon) {
+        this.node = icon;
+        this.show = this.show.bind(this);
+        this.hide = this.hide.bind(this);
+    }
+    // Public Null
+    Icon.prototype.show = function () {
+        if (this.node.classList.contains("hide")) {
+            this.node.classList.remove("hide");
+        }
+    };
+    // Public Null
+    Icon.prototype.hide = function () {
+        if (!this.node.classList.contains("hide")) {
+            this.node.classList.add("hide");
+        }
+    };
+    return Icon;
+}());
+exports.default = Icon;
+
+
+/***/ }),
+
+/***/ "./src/classes/Link.ts":
+/*!*****************************!*\
+  !*** ./src/classes/Link.ts ***!
+  \*****************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.HamburgerNavLink = exports.TopNavLink = void 0;
+var Icon_1 = __importDefault(__webpack_require__(/*! ./Icon */ "./src/classes/Icon.ts"));
+var Link = /** @class */ (function () {
+    function Link(link, labelMappings) {
+        if (labelMappings === void 0) { labelMappings = {}; }
+        this.labelMappings = {};
+        this.node = link;
+        this.labelMappings = labelMappings;
+        this.hide = this.hide.bind(this);
+        this.show = this.show.bind(this);
+        this.isHidden = this.isHidden.bind(this);
+    }
+    // Public Null
+    Link.prototype.hide = function () {
+        if (!this.node.classList.contains("hide")) {
+            this.node.classList.add("hide");
+        }
+    };
+    // Public Null
+    Link.prototype.show = function () {
+        if (this.node.classList.contains("hide")) {
+            this.node.classList.remove("hide");
+        }
+    };
+    // Public Bool
+    Link.prototype.isHidden = function () {
+        if (this.node.classList.contains("hide")) {
+            return true;
+        }
+        return false;
+    };
+    return Link;
+}());
+var TopNavLink = /** @class */ (function (_super) {
+    __extends(TopNavLink, _super);
+    function TopNavLink(link, labelMappings) {
+        if (labelMappings === void 0) { labelMappings = {}; }
+        var _this = _super.call(this, link, labelMappings) || this;
+        _this.hasChildren = false; // Bool
+        _this.childLinks = []; // Array<HTMLElement>
+        for (var i = 0; i < _this.node.children.length; i++) {
+            var child = _this.node.children[i];
+            // child is HTMLElement
+            if (child.classList.contains("navLink")) {
+                _this.link = child;
+            }
+            else if (child.classList.contains("navChildItems")) {
+                _this.childLinksNode = child;
+                _this.hasChildren = true;
+            }
+            else if (child.classList.contains("linkIcon")) {
+                _this.icon = new Icon_1.default(child);
+            }
+        }
+        if (_this.hasChildren) {
+            for (var i = 0; i < _this.childLinksNode.children.length; i++) {
+                var link_1 = _this.childLinksNode.children[i];
+                _this.childLinks = __spreadArray(__spreadArray([], __read(_this.childLinks)), [link_1]);
+            }
+        }
+        // create new li in .navChildItems at beginning of list
+        // append a element from topNav to new li
+        // append new div to original .navItem
+        if (_this.hasChildren) {
+            // this.formatLink();
+        }
+        return _this;
+    }
+    Object.defineProperty(TopNavLink.prototype, "width", {
+        // Public Int
+        get: function () {
+            var linkRect = this.node.getBoundingClientRect();
+            return linkRect.right - linkRect.left;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    TopNavLink.prototype.formatLink = function () {
+        var mainLinkInnerHtml = this.link.innerHTML.trim();
+        var label = "Label";
+        for (var title in this.labelMappings) {
+            if (Object.hasOwnProperty.call(this.labelMappings, title)) {
+                if (title == mainLinkInnerHtml) {
+                    label = this.labelMappings[title];
+                }
+            }
+        }
+        var newNavChildItem = document.createElement("LI");
+        newNavChildItem.classList.add("navChildItem");
+        this.childLinksNode.prepend(newNavChildItem);
+        newNavChildItem.appendChild(this.link);
+        var newLabel = document.createElement("DIV");
+        newLabel.innerHTML = label;
+        newLabel.classList.add("navLink");
+        newLabel.classList.add("navLabel");
+        this.node.prepend(newLabel);
+    };
+    TopNavLink.prototype.toggle = function () {
+        if (this.childLinksNode.classList.contains("hide")) {
+            this.open();
+        }
+        else {
+            this.close();
+        }
+    };
+    TopNavLink.prototype.open = function () {
+        var linkBox = this.node.getBoundingClientRect();
+        var height = linkBox.bottom - linkBox.top;
+        this.childLinksNode.style.top = height + "px";
+        this.childLinksNode.classList.remove("hide");
+        this.node.classList.add("open");
+    };
+    TopNavLink.prototype.close = function () {
+        if (this.childLinksNode) {
+            this.childLinksNode.classList.add("hide");
+            this.node.classList.remove("open");
+        }
+    };
+    return TopNavLink;
+}(Link));
+exports.TopNavLink = TopNavLink;
+var HamburgerNavLink = /** @class */ (function (_super) {
+    __extends(HamburgerNavLink, _super);
+    function HamburgerNavLink(link) {
+        var _this = _super.call(this, link) || this;
+        _this.hasChildren = false; // Bool
+        _this.childLinks = []; // Array<HTMLElement>
+        for (var i = 0; i < _this.node.children.length; i++) {
+            var child = _this.node.children[i];
+            if (child.classList.contains("hamburgerLink")) {
+                _this.link = child;
+                for (var j = 0; j < child.children.length; j++) {
+                    var subChild = child.children[j];
+                    if (subChild.classList.contains("linkIcon")) {
+                        _this.hasChildren = true;
+                        _this.desktopIcon = new Icon_1.default(subChild);
+                    }
+                }
+            }
+            else if (child.classList.contains("hamburgerChildItems")) {
+                _this.childLinksNode = child;
+            }
+            else if (child.classList.contains("linkIcon")) {
+                _this.mobileIcon = new Icon_1.default(child);
+                _this.mobileIcon.hide();
+            }
+        }
+        if (_this.hasChildren) {
+            for (var i = 0; i < _this.childLinksNode.children.length; i++) {
+                var link_2 = _this.childLinksNode.children[i];
+                _this.childLinks = __spreadArray(__spreadArray([], __read(_this.childLinks)), [link_2]);
+            }
+        }
+        return _this;
+    }
+    Object.defineProperty(HamburgerNavLink.prototype, "isMenuOpen", {
+        get: function () {
+            if (this.childLinksNode.style.maxHeight) {
+                return true;
+            }
+            return false;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    HamburgerNavLink.prototype.toggle = function () {
+        if (this.isMenuOpen) {
+            // this.mobileIcon.node.classList.remove("spin");
+            this.close();
+        }
+        else {
+            // this.mobileIcon.node.classList.add("spin");
+            this.open();
+        }
+    };
+    HamburgerNavLink.prototype.close = function () {
+        if (this.childLinksNode) {
+            this.childLinksNode.style.maxHeight = null;
+        }
+    };
+    HamburgerNavLink.prototype.open = function () {
+        if (this.childLinksNode) {
+            this.childLinksNode.style.maxHeight = this.childLinksNode.scrollHeight + "px";
+        }
+    };
+    return HamburgerNavLink;
+}(Link));
+exports.HamburgerNavLink = HamburgerNavLink;
+
+
+/***/ }),
+
+/***/ "./src/classes/NavMenu.ts":
+/*!********************************!*\
+  !*** ./src/classes/NavMenu.ts ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TopNav = exports.Hamburger = void 0;
+var Link_1 = __webpack_require__(/*! ./Link */ "./src/classes/Link.ts");
+var NavMenu = /** @class */ (function () {
+    function NavMenu(menu, labelMappings) {
+        if (labelMappings === void 0) { labelMappings = {}; }
+        this.links = []; // Array<Link>
+        this.labelMappings = {};
+        this.node = menu;
+        this.labelMappings = labelMappings;
+        this.hideAll = this.hideAll.bind(this);
+        this.showAll = this.showAll.bind(this);
+    }
+    // Public Null
+    NavMenu.prototype.hideAll = function () {
+        this.links.forEach(function (link) { return link.hide(); });
+    };
+    // Public Null
+    NavMenu.prototype.showAll = function () {
+        this.links.forEach(function (link) { return link.show(); });
+    };
+    return NavMenu;
+}());
+var Hamburger = /** @class */ (function (_super) {
+    __extends(Hamburger, _super);
+    function Hamburger(menu) {
+        var _this = _super.call(this, menu) || this;
+        for (var i = 0; i < _this.node.children.length; i++) {
+            var link = _this.node.children[i];
+            var newLink = new Link_1.HamburgerNavLink(link);
+            _this.links = __spreadArray(__spreadArray([], __read(_this.links)), [newLink]);
+        }
+        _this.addEventListeners();
+        _this.show = _this.show.bind(_this);
+        _this.hide = _this.hide.bind(_this);
+        _this.toMobile = _this.toMobile.bind(_this);
+        _this.toDesktop = _this.toDesktop.bind(_this);
+        _this.showOne = _this.showOne.bind(_this);
+        return _this;
+    }
+    Object.defineProperty(Hamburger.prototype, "isMobile", {
+        // Public Bool
+        get: function () {
+            if (this.node.classList.contains("mobile")) {
+                return true;
+            }
+            return false;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Hamburger.prototype, "isHidden", {
+        // Public Bool
+        get: function () {
+            if (this.node.classList.contains("hide")) {
+                return true;
+            }
+            return false;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    // Public Null
+    Hamburger.prototype.show = function () {
+        this.node.classList.remove("hide");
+    };
+    // Public Null
+    Hamburger.prototype.hide = function () {
+        var _this = this;
+        this.node.classList.add("hide");
+        setTimeout(function () {
+            _this.closeAllMenus();
+        }, 150);
+    };
+    // Public Null
+    Hamburger.prototype.toMobile = function () {
+        this.node.classList.add("mobile");
+        this.links.forEach(function (link) {
+            if (link.desktopIcon) {
+                link.desktopIcon.hide();
+            }
+            if (link.mobileIcon) {
+                link.mobileIcon.show();
+            }
+        });
+    };
+    // Public Null
+    Hamburger.prototype.toDesktop = function () {
+        this.node.classList.remove("mobile");
+        this.links.forEach(function (link) {
+            if (link.desktopIcon) {
+                link.desktopIcon.show();
+            }
+            if (link.mobileIcon) {
+                link.mobileIcon.hide();
+            }
+        });
+    };
+    // Public Null
+    Hamburger.prototype.showOne = function () {
+        for (var i = this.links.length - 1; i >= 0; i--) {
+            var link = this.links[i];
+            if (link.isHidden()) {
+                link.show();
+                break;
+            }
+        }
+    };
+    Hamburger.prototype.handleLinks = function (link) {
+        console.log(link.isMenuOpen);
+        if (!link.isMenuOpen) {
+            this.closeAllMenus();
+            link.open();
+        }
+        else {
+            link.close();
+        }
+    };
+    Hamburger.prototype.addEventListeners = function () {
+        var _this = this;
+        this.links.forEach(function (link) {
+            if (link.hasChildren) {
+                link.node.addEventListener("click", function () {
+                    console.log("click");
+                    _this.handleLinks(link);
+                });
+            }
+        });
+    };
+    Hamburger.prototype.closeAllMenus = function () {
+        this.links.forEach(function (link) {
+            link.close();
+        });
+    };
+    return Hamburger;
+}(NavMenu));
+exports.Hamburger = Hamburger;
+var TopNav = /** @class */ (function (_super) {
+    __extends(TopNav, _super);
+    function TopNav(menu, labelMappings) {
+        if (labelMappings === void 0) { labelMappings = {}; }
+        var _this = _super.call(this, menu, labelMappings) || this;
+        for (var i = 0; i < _this.node.children.length; i++) {
+            var link = _this.node.children[i];
+            var newLink = new Link_1.TopNavLink(link, _this.labelMappings);
+            _this.links = __spreadArray(__spreadArray([], __read(_this.links)), [newLink]);
+        }
+        _this.hideOne = _this.hideOne.bind(_this);
+        _this.closeAllMenus = _this.closeAllMenus.bind(_this);
+        _this.addEventListeners();
+        return _this;
+    }
+    Object.defineProperty(TopNav.prototype, "totalWidth", {
+        // Public Int
+        get: function () {
+            var width = 0;
+            this.links.forEach(function (link) {
+                width += link.width;
+            });
+            return width;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    // Public Null
+    TopNav.prototype.hideOne = function () {
+        for (var i = this.links.length - 1; i >= 0; i--) {
+            var link = this.links[i];
+            if (!link.isHidden()) {
+                link.hide();
+                break;
+            }
+        }
+    };
+    TopNav.prototype.handleLinks = function (link) {
+        if (link.childLinksNode.classList.contains("hide")) {
+            this.closeAllMenus();
+            link.open();
+        }
+        else {
+            link.close();
+        }
+    };
+    TopNav.prototype.addEventListeners = function () {
+        var _this = this;
+        this.links.forEach(function (link) {
+            if (link.hasChildren) {
+                link.node.addEventListener("click", function () {
+                    _this.handleLinks(link);
+                });
+            }
+        });
+    };
+    TopNav.prototype.closeAllMenus = function () {
+        this.links.forEach(function (link) {
+            link.close();
+        });
+    };
+    return TopNav;
+}(NavMenu));
+exports.TopNav = TopNav;
+
+
+/***/ }),
+
+/***/ "./src/classes/Navigation.ts":
+/*!***********************************!*\
+  !*** ./src/classes/Navigation.ts ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var NavMenu_1 = __webpack_require__(/*! ./NavMenu */ "./src/classes/NavMenu.ts");
+var Navigation = /** @class */ (function () {
+    function Navigation(nav, labelMapping) {
+        if (labelMapping === void 0) { labelMapping = {}; }
+        // HTMLElement nav
+        this.getNavItems = this.getNavItems.bind(this);
+        this.handleResize = this.handleResize.bind(this);
+        this.moveAllToHamburger = this.moveAllToHamburger.bind(this);
+        this.moveAllToNav = this.moveAllToNav.bind(this);
+        this.moveOneToHamburger = this.moveOneToHamburger.bind(this);
+        this.isNavWrapped = this.isNavWrapped.bind(this);
+        this.handleMouseOverHamburger = this.handleMouseOverHamburger.bind(this);
+        this.addEventListeners = this.addEventListeners.bind(this);
+        this.labelMappings = labelMapping;
+        this.fullNav = nav;
+        this.getNavItems();
+        this.addEventListeners();
+    }
+    // Private Null
+    Navigation.prototype.getNavItems = function () {
+        for (var i = 0; i < this.fullNav.children.length; i++) {
+            var child = this.fullNav.children[i];
+            // child is HTMLElement
+            if (child.classList.contains("topNav")) {
+                this.topNav = new NavMenu_1.TopNav(child, this.labelMappings);
+            }
+            else if (child.classList.contains("hamburgerWrapper")) {
+                this.hamburgerWrapper = child;
+            }
+        }
+        if (!this.topNav || !this.hamburgerWrapper) {
+            throw new Error("Invalid Navigation Structure");
+        }
+        for (var i = 0; i < this.hamburgerWrapper.children.length; i++) {
+            var child = this.hamburgerWrapper.children[i];
+            // child is HTMLElement
+            if (child.classList.contains("hamburgerButton")) {
+                this.hamburgerButton = child;
+            }
+            else if (child.classList.contains("hamburger")) {
+                this.hamburger = new NavMenu_1.Hamburger(child);
+            }
+        }
+        if (!this.hamburgerButton || !this.hamburger) {
+            throw new Error("Invalid Hamburger Navigation Structure");
+        }
+    };
+    // Public Null
+    Navigation.prototype.handleResize = function () {
+        // for mobile
+        if (document.documentElement.clientWidth <= 768) {
+            this.moveAllToHamburger();
+            // this.hamburger.toMobile();
+        }
+        // for desktop
+        else {
+            this.moveAllToNav();
+            this.hamburger.toDesktop();
+            while (this.isNavWrapped()) {
+                this.moveOneToHamburger();
+            }
+        }
+    };
+    // Private Null
+    Navigation.prototype.moveAllToHamburger = function () {
+        this.hamburger.showAll();
+        this.topNav.hideAll();
+    };
+    // Private Null
+    Navigation.prototype.moveAllToNav = function () {
+        this.hamburgerWrapper.classList.add("hide");
+        this.hamburger.hideAll();
+        this.topNav.showAll();
+    };
+    // Private Null
+    Navigation.prototype.moveOneToHamburger = function () {
+        this.hamburgerWrapper.classList.remove("hide");
+        this.topNav.hideOne();
+        this.hamburger.showOne();
+    };
+    // Private Bool
+    Navigation.prototype.isNavWrapped = function () {
+        var navigationRect = this.fullNav.getBoundingClientRect();
+        var navWidth = navigationRect.right - navigationRect.left;
+        var linksWidth = this.topNav.totalWidth;
+        // 50 is icon width, refactor later to use actual icon width
+        if (linksWidth > navWidth - 50) {
+            return true;
+        }
+        return false;
+    };
+    // Private HTMLElement
+    Navigation.prototype.getParentIfTagMatchesNode = function (node, excludedTag) {
+        // HTMLElement node, String excludedTag
+        if (node.tagName == excludedTag) {
+            return node.parentElement;
+        }
+        else {
+            return node;
+        }
+    };
+    // Private Null
+    Navigation.prototype.handleMouseOverHamburger = function (link) {
+        // Link link
+        if (link.hasChildren) {
+            var linkBox = link.node.getBoundingClientRect();
+            if (!this.hamburger.isMobile) {
+                var width = linkBox.right - linkBox.left;
+                link.childLinksNode.style.right = width + "px";
+                link.childLinksNode.classList.remove("hide");
+            }
+        }
+    };
+    // Private Null
+    Navigation.prototype.handleMouseLeaveHamburger = function (link) {
+        // Link link
+        if (link.hasChildren) {
+            link.childLinksNode.style.right = "0px";
+            link.childLinksNode.classList.add("hide");
+        }
+    };
+    // Private Null
+    Navigation.prototype.handleMouseOverNav = function (link) {
+        // Link link
+        if (link.hasChildren) {
+            var linkBox = link.node.getBoundingClientRect();
+            var height = linkBox.bottom - linkBox.top;
+            link.childLinksNode.style.top = height + "px";
+            link.childLinksNode.classList.remove("hide");
+        }
+    };
+    // Private Null
+    Navigation.prototype.handleMouseLeaveNav = function (link) {
+        // Link link
+        if (link.hasChildren) {
+            link.childLinksNode.classList.add("hide");
+        }
+    };
+    // Private Null
+    Navigation.prototype.handleHamburgerButton = function () {
+        // Hamburger hamburger
+        if (this.hamburger.isHidden) {
+            this.hamburger.show();
+        }
+        else {
+            this.hamburger.hide();
+        }
+    };
+    // Private Null
+    Navigation.prototype.handleExpandSubMenuButton = function (link) {
+        // Link link
+        if (link.childLinksNode.style.maxHeight) {
+            link.mobileIcon.node.classList.remove("spin");
+            link.childLinksNode.style.maxHeight = null;
+        }
+        else {
+            link.mobileIcon.node.classList.add("spin");
+            link.childLinksNode.style.maxHeight = link.childLinksNode.scrollHeight + "px";
+        }
+    };
+    Navigation.prototype.getParents = function (elem) {
+        if (elem.tagName == "HTML") {
+            return [elem];
+        }
+        return __spreadArray([elem.parentElement], __read(this.getParents(elem.parentElement)));
+    };
+    Navigation.prototype.hasParent = function (elem, parentElement) {
+        var parents = this.getParents(elem);
+        for (var i = 0; i < parents.length; i++) {
+            var parent_1 = parents[i];
+            if (parent_1 == parentElement) {
+                return true;
+            }
+        }
+        return false;
+    };
+    // Private Null
+    Navigation.prototype.handlePageClick = function (e) {
+        if (!this.hasParent(e.target, this.hamburgerWrapper)) {
+            this.hamburger.hide();
+        }
+        if (!this.hasParent(e.target, this.topNav.node)) {
+            this.topNav.closeAllMenus();
+        }
+    };
+    // Private Null
+    Navigation.prototype.show = function () {
+        this.fullNav.classList.add("show");
+    };
+    // Private Null
+    Navigation.prototype.addEventListeners = function () {
+        var _this = this;
+        this.hamburger.links.forEach(function (link) {
+            // link.node.addEventListener("click", () => {
+            //     this.handleMouseOverHamburger(link);
+            // })
+            // link.node.addEventListener("mouseleave", () => {
+            //     this.handleMouseLeaveHamburger(link);
+            // })
+            // if (link.hasChildren) {
+            //     link.mobileIcon.node.addEventListener("click", () => {
+            //         this.handleExpandSubMenuButton(link);
+            //     })
+            // }
+        });
+        // this.topNav.links.forEach(link => {
+        //     link.node.addEventListener("click", () => {
+        //         this.handleMouseOverNav(link)
+        //     })
+        // link.node.addEventListener("mouseleave", () => {
+        //     this.handleMouseLeaveNav(link)
+        // })
+        // })
+        this.hamburgerButton.addEventListener("click", function (e) {
+            _this.handleHamburgerButton();
+        });
+        window.addEventListener("click", function (e) {
+            _this.handlePageClick(e);
+        });
+    };
+    return Navigation;
+}());
+exports.default = Navigation;
+
+
+/***/ }),
+
+/***/ "./src/classes/Video.ts":
+/*!******************************!*\
+  !*** ./src/classes/Video.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var Video = /** @class */ (function () {
+    function Video(node, page) {
+        console.log(node);
+        this.node = node;
+        this.page = page;
+        this.getURL();
+        this.getUrlDomain();
+        this.getUrlSlug();
+        this.createVideoDiv();
+    }
+    Video.prototype.getURL = function () {
+        if (this.node.dataset.url) {
+            this.url = this.node.dataset.url;
+        }
+        else {
+            console.error("No URL");
+            return;
+        }
+    };
+    Video.prototype.getUrlDomain = function () {
+        var _this = this;
+        var domains = [
+            "youtube.com",
+            "vimeo.com"
+        ];
+        this.domain = domains.find(function (d) {
+            return _this.url.includes(d);
+        });
+    };
+    Video.prototype.getUrlSlug = function () {
+        if (this.node.dataset.slug) {
+            this.slug = this.node.dataset.slug;
+        }
+        else {
+            console.error("No Slug");
+        }
+    };
+    Video.prototype.formatVideoURL = function () {
+        switch (this.domain) {
+            case "youtube.com":
+                var youtubeSplit = this.url.split("?v=");
+                var youtubeVideoID = youtubeSplit[youtubeSplit.length - 1];
+                return "https://youtube.com/embed/" + youtubeVideoID;
+            case "vimeo.com":
+                var urlSplit = this.url.split("/");
+                var videoID = "";
+                for (var i = urlSplit.length - 1; i >= 0; i--) {
+                    var element = urlSplit[i];
+                    if (element) {
+                        videoID = element;
+                        break;
+                    }
+                }
+                return "https://player.vimeo.com/video/" + videoID;
+            default:
+                throw new Error("What");
+        }
+    };
+    Video.prototype.getIFrame = function () {
+        var url = this.formatVideoURL();
+        switch (this.domain) {
+            case "youtube.com":
+                return ("<iframe \n                        src=" + url + "\n                        title=\"YouTube video player\" \n                        frameBorder=\"0\" \n                        allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" \n                        allowFullScreen>\n                    </iframe>");
+            case "vimeo.com":
+                return ("<iframe \n                        src=" + url + "\n                        frameBorder=\"0\" \n                        allow=\"autoplay; fullscreen; picture-in-picture\" \n                        allowFullScreen>\n                    </iframe>");
+            default:
+                console.error("Unknown video type");
+        }
+    };
+    Video.prototype.createVideoDiv = function () {
+        var iframe = this.getIFrame();
+        var iframeWrapper = document.createElement("div");
+        iframeWrapper.classList.value = "c-talk__video-wrapper";
+        iframeWrapper.innerHTML = iframe;
+        this.node.classList.value = "c-talk__video";
+        this.node.style.display = "block";
+        this.node.appendChild(iframeWrapper);
+        var params = new URLSearchParams(window.location.search);
+        if (!params.has("v")) {
+            var link = document.createElement("a");
+            link.classList.value = "c-talk__video-link";
+            var linkSlug = this.page + "?v=" + this.slug;
+            link.href = linkSlug;
+            this.node.appendChild(link);
+        }
+    };
+    return Video;
+}());
+exports.default = Video;
+
+
+/***/ }),
+
+/***/ "./src/index.ts":
+/*!**********************!*\
+  !*** ./src/index.ts ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var dynamicNav_1 = __importDefault(__webpack_require__(/*! ./dynamicNav */ "./src/dynamicNav.js"));
+var previewImage_1 = __webpack_require__(/*! ./previewImage */ "./src/previewImage.js");
+var wordCounter_1 = __webpack_require__(/*! ./wordCounter */ "./src/wordCounter.js");
+__webpack_require__(/*! ./videos */ "./src/videos.ts");
+dynamicNav_1.default();
+previewImage_1.implementPreviewImage();
+wordCounter_1.implementWordCount();
+
+
+/***/ }),
+
+/***/ "./src/videos.ts":
+/*!***********************!*\
+  !*** ./src/videos.ts ***!
+  \***********************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var Video_1 = __importDefault(__webpack_require__(/*! ./classes/Video */ "./src/classes/Video.ts"));
+var videos = Array.from(document.getElementsByClassName("c-talk__URL"));
+videos.forEach(function (v) {
+    new Video_1.default(v, "/videos-test");
+});
+
 
 /***/ })
 
@@ -110,13 +1206,25 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -149,8 +1257,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
 /******/ 	
 /******/ })()
 ;
+//# sourceMappingURL=bundle.js.map

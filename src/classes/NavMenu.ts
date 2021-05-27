@@ -153,7 +153,7 @@ export class TopNav extends NavMenu {
         super(menu, labelMappings)
         for (let i = 0; i < this.node.children.length; i++) {
             const link = this.node.children[i];
-            let newLink = new TopNavLink(link, this.labelMappings, this.closeAllMenus);
+            let newLink = new TopNavLink(link, this.labelMappings);
             this.links = [...this.links, newLink];
         }
 

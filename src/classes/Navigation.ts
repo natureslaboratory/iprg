@@ -243,7 +243,7 @@ export default class Navigation {
         // })
 
         this.hamburgerButton.addEventListener("click", (e) => {
-            this.handleHamburgerButton(this.hamburger);
+            this.handleHamburgerButton();
         })
 
         window.addEventListener("click", (e) => {

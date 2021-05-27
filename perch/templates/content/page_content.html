@@ -271,4 +271,20 @@
 		</perch:repeater>
 	</perch:block>
 
+	<perch:block type="talks" label="Talks">
+		<perch:repeater id="talkContainer" label="Talk Container">
+			<perch:showall>
+			<div class="c-talk restrict">
+				<div style="display: none" class="c-talk__URL" data-url="<perch:content id="videoURL" label="Video URL" type="text">"></div>
+				<div class="c-talk__details">
+					<h2><perch:content id="talkTitle" label="Talk Title" type="text"></h2>
+					<h4><perch:content id="speaker" label="Speaker" type="text"></h4>
+					<div>
+						<perch:content id="abstract" label="Abstract" type="textarea" editor="redactor" html>
+					</div>
+				</div>
+			</div>
+		</perch:repeater>
+	</perch:block>
+
 </perch:blocks>
