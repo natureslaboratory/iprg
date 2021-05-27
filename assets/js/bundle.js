@@ -1180,10 +1180,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 var Video_1 = __importDefault(__webpack_require__(/*! ./classes/Video */ "./src/classes/Video.ts"));
 var videos = Array.from(document.getElementsByClassName("c-talk__URL"));
 videos.forEach(function (v) {
-    var page = window.location.hostname;
-    console.log("hello");
-    console.log(page);
-    new Video_1.default(v, "/videos");
+    var relativePath = window.location.pathname;
+    if (relativePath.includes("index.php")) {
+        relativePath = relativePath.split("index.php")[0];
+    }
+    new Video_1.default(v, relativePath);
 });
 
 

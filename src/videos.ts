@@ -2,11 +2,12 @@ import Video from './classes/Video';
 
 let videos = Array.from(document.getElementsByClassName("c-talk__URL") as HTMLCollectionOf<HTMLElement>);
 videos.forEach(v => {
-    let page = window.location.hostname;
-    console.log("hello");
-    console.log(page);
+    let relativePath = window.location.pathname;
+    if (relativePath.includes("index.php")) {
+        relativePath = relativePath.split("index.php")[0];
+    }
 
-    new Video(v, "/videos");
+    new Video(v, relativePath);
 })
 
 
