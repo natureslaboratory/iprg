@@ -1180,7 +1180,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 var Video_1 = __importDefault(__webpack_require__(/*! ./classes/Video */ "./src/classes/Video.ts"));
 var videos = Array.from(document.getElementsByClassName("c-talk__URL"));
 videos.forEach(function (v) {
-    new Video_1.default(v, "/videos-test");
+    var page = window.location.hostname;
+    console.log(page);
+    new Video_1.default(v, "/videos");
 });
 
 
