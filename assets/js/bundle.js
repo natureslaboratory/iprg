@@ -2,52 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/dynamicNav.js":
-/*!***************************!*\
-  !*** ./src/dynamicNav.js ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _classes_Navigation_ts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes/Navigation.ts */ "./src/classes/Navigation.ts");
-/* harmony import */ var _classes_Navigation_ts__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_classes_Navigation_ts__WEBPACK_IMPORTED_MODULE_0__);
-
-
-const implementNav = () => {
-    let navigationItems = document.getElementsByClassName("navigation");
-    let navigationArray = [];
-    for (let i = 0; i < navigationItems.length; i++) {
-        const nav = navigationItems[i];
-        let navigation = new (_classes_Navigation_ts__WEBPACK_IMPORTED_MODULE_0___default())(nav, {"Abstract Submission": "Abstract", "Scientific Committee": "Science"});
-        navigationArray = [...navigationArray, navigation];
-    }
-    if (navigationArray) {
-        window.onload = () => {
-            navigationArray.forEach(nav => {
-                nav.handleResize()
-            })
-            setTimeout(() => {
-                navigationArray.forEach(nav => {
-                    nav.show();
-                })
-            }, 20)
-        };
-
-        window.addEventListener("resize", () => {
-            navigationArray.forEach(nav => {
-                nav.handleResize();
-            })
-        });
-    }
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (implementNav);
-
-/***/ }),
-
 /***/ "./src/previewImage.js":
 /*!*****************************!*\
   !*** ./src/previewImage.js ***!
@@ -1144,6 +1098,70 @@ exports.default = Video;
 
 /***/ }),
 
+/***/ "./src/dynamicNav.ts":
+/*!***************************!*\
+  !*** ./src/dynamicNav.ts ***!
+  \***************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var Navigation_1 = __importDefault(__webpack_require__(/*! ./classes/Navigation */ "./src/classes/Navigation.ts"));
+var implementNav = function () {
+    var navigationItems = document.getElementsByClassName("navigation");
+    var navigationArray = [];
+    for (var i = 0; i < navigationItems.length; i++) {
+        var nav = navigationItems[i];
+        var navigation = new Navigation_1.default(nav, { "Abstract Submission": "Abstract", "Scientific Committee": "Science" });
+        navigationArray = __spreadArray(__spreadArray([], __read(navigationArray)), [navigation]);
+    }
+    if (navigationArray) {
+        window.addEventListener("DOMContentLoaded", function () {
+            navigationArray.forEach(function (nav) {
+                nav.handleResize();
+            });
+            setTimeout(function () {
+                navigationArray.forEach(function (nav) {
+                    nav.show();
+                });
+            }, 20);
+        });
+        window.addEventListener("resize", function () {
+            navigationArray.forEach(function (nav) {
+                nav.handleResize();
+            });
+        });
+    }
+};
+exports.default = implementNav;
+
+
+/***/ }),
+
 /***/ "./src/index.ts":
 /*!**********************!*\
   !*** ./src/index.ts ***!
@@ -1155,7 +1173,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var dynamicNav_1 = __importDefault(__webpack_require__(/*! ./dynamicNav */ "./src/dynamicNav.js"));
+var dynamicNav_1 = __importDefault(__webpack_require__(/*! ./dynamicNav */ "./src/dynamicNav.ts"));
 var previewImage_1 = __webpack_require__(/*! ./previewImage */ "./src/previewImage.js");
 var wordCounter_1 = __webpack_require__(/*! ./wordCounter */ "./src/wordCounter.js");
 __webpack_require__(/*! ./videos */ "./src/videos.ts");
@@ -1217,18 +1235,6 @@ videos.forEach(function (v) {
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
