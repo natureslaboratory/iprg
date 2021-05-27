@@ -1754,6 +1754,7 @@ form {
 	width: 100%;
 	aspect-ratio: 16 / 9;
 	position: relative;
+	padding-bottom: 56.25%;
 }
 
 .c-talk__video-wrapper > iframe {
@@ -1773,6 +1774,8 @@ form {
 
 .c-talk__video-wrapper {
 	height: 100%;
+	position: absolute;
+	width: 100%;
 }
 
 .c-talk__details h3 {
