@@ -1181,6 +1181,7 @@ var Video_1 = __importDefault(__webpack_require__(/*! ./classes/Video */ "./src/
 var videos = Array.from(document.getElementsByClassName("c-talk__URL"));
 videos.forEach(function (v) {
     var page = window.location.hostname;
+    console.log("hello");
     console.log(page);
     new Video_1.default(v, "/videos");
 });
