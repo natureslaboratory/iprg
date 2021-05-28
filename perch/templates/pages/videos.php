@@ -3,9 +3,20 @@
 
 <?php
 
-perch_content_create("Videos", ["template" => "videos.html"]);
+    function printArray($item, $depth = 0)
+    {
+    foreach ($item as $key => $value) {
+        $depthString = str_repeat("--", $depth);
+        if (gettype($value) !== "array") {
+            echo "$depthString $key: $value <br>";
+        } else {
+            echo "$depthString $key: <br>";
+            printArray($value, $depth + 1);
+        }
+    }
+    }
 
-// $videos = 
+perch_content_create("Videos", ["template" => "videos.html"]);
 
 ?>
 
@@ -23,35 +34,39 @@ perch_content_create("Videos", ["template" => "videos.html"]);
     <a href="<?= $page ?>" style="margin-bottom: 1.5rem; display: block">Back to videos</a>
 
     <?php
+    
+    $blocks = perch_content_custom("Videos", ["skip-template" => true], true)[0]["_blocks"];
+    
+    $talkContainers = [];
 
-    $videos = perch_content_custom("Videos", ["skip-template" => true], true)[0]["talkContainer"];
-    foreach ($videos as $video) {
-        if ($video["slug"] == perch_get("v")) {
-            ?>
-                <div class="c-talk__URL" data-url="<?= $video["videoURL"] ?>" data-slug="<?= $video["slug"] ?>"></div>
-                <div class="c-talk__details">
-                    <h3><?= $video["talkTitle"] ?></h3>
-                    <h4> <?= $video["speaker"] ?></h4>
-                    <div class="c-talk__description">
-                        <?= $video["abstract"]["processed"] ?>
-                    </div>
-                </div>
-            <?php
+    foreach ($blocks as $block) {
+        foreach ($block as $key => $value) {
+            if ($key == "talkContainer") {
+                $talkContainers[] = $block["talkContainer"];
+            }
         }
     }
 
-    ?>
-    </div>
-    <?php
+    $selectedTalk;
+    $slug = perch_get("v");
 
+    foreach ($talkContainers as $container) {
+        foreach ($container as $talk) {
+            if ($talk["slug"] == $slug) {
+                $selectedTalk = $talk;
+                break;
+            }
+        }
+        if ($selectedTalk) {
+            break;
+        }
+    }
 
-    // echo perch_get("v");
-    // perch_content_custom("Videos", ["data" => ["videoSlug" => perch_get("v")]]);
+    perch_template("content/video.html", $selectedTalk);
 
 } else {
-
 	perch_content('Page Content'); 
-    perch_content_custom("Videos", ["template" => "videos_thumbnails.html", "data" => ["page" => $page]]);
+    perch_content_custom("Videos", ["template" => "videos_thumbnails.html"]);
 }
 
 ?>

@@ -1,27 +1,49 @@
+import axios from "axios"
+
+interface videoDetails {
+    thumbnail : string
+    height? : number,
+    width? : number
+}
+
 export default class Video {
     node : HTMLElement
     url : string
     domain : string
     slug : string
     page : string
+    videoDetails : videoDetails = {
+        thumbnail: "",
+        height: null,
+        width: null
+    }
 
 
     constructor(node : HTMLElement, page : string) {
-        console.log(node);
         this.node = node;
         this.page = page;
 
+        this.getVideo();
+    }
+
+    private async getVideo() {
         this.getURL();
         this.getUrlDomain();
+        await this.getVideoDetails();
         this.getUrlSlug();
-        this.createVideoDiv();
+        
+        let params = new URLSearchParams(window.location.search);
+        if (params.has("v")) {
+            this.createVideoDiv();
+        } else {
+            this.createThumbnail();
+        }
     }
 
     private getURL() {
         if (this.node.dataset.url) {
             this.url = this.node.dataset.url;
         } else {
-            console.error("No URL")
             return;
         }
     }
@@ -41,7 +63,6 @@ export default class Video {
         if (this.node.dataset.slug) {
             this.slug = this.node.dataset.slug
         } else {
-            console.error("No Slug")
         }
     }
 
@@ -106,6 +127,7 @@ export default class Video {
         
         this.node.appendChild(iframeWrapper);
         let params = new URLSearchParams(window.location.search);
+
         if (!params.has("v")) {
             let link = document.createElement("a");
             link.classList.value = "c-talk__video-link";
@@ -113,6 +135,38 @@ export default class Video {
             let linkSlug = `${this.page}?v=${this.slug}`;
             link.href = linkSlug;
             this.node.appendChild(link);
+        }
+    }
+
+    private async getVideoDetails() {
+        if (this.domain == "vimeo.com") {
+            let urlSpl = this.url.split("/");
+            let id = urlSpl[urlSpl.length-1];
+            let details = await axios.get(`http://vimeo.com/api/v2/video/${id}.json`);
+            this.videoDetails.thumbnail = details.data[0].thumbnail_large;
+            this.videoDetails.height = details.data.height;
+            this.videoDetails.width = details.data.width;
+        }
+    }
+
+    private createThumbnail() {
+        if (this.videoDetails.thumbnail) {
+            let thumbNail = document.createElement("img");
+            thumbNail.src = this.videoDetails.thumbnail;
+            thumbNail.classList.add("c-video__thumbnail");
+            this.node.appendChild(thumbNail);
+
+            this.node.classList.value = "c-talk__thumbnail";
+            this.node.style.display = "block";
+
+            let link = document.createElement("a");
+            link.classList.value = "c-talk__video-link";
+    
+            let linkSlug = `${this.page}?v=${this.slug}`;
+            link.href = linkSlug;
+            this.node.appendChild(link);
+        } else {
+            this.createVideoDiv();
         }
 
     }

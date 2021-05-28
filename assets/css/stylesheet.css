@@ -1750,10 +1750,13 @@ form {
 	text-decoration: none;
 }
 
-.c-talk__video {
+.c-talk__thumbnail, .c-talk__video {
 	width: 100%;
 	aspect-ratio: 16 / 9;
 	position: relative;
+}
+
+.c-talk__video {
 	padding-bottom: 56.25%;
 }
 

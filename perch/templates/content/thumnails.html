@@ -1,0 +1,11 @@
+<div class="c-videos restrict">
+    <perch:repeater id="talkContainer" label="Talk Container">
+        <div class="c-talk">
+            <div style="display: none" class="c-talk__URL" data-url="<perch:content id="videoURL">" data-slug="<perch:content id="slug">"></div>
+            <div class="c-talk__details">
+                <a href="<perch:content id="page">?v=<perch:content id="slug" />"><h3><perch:content id="talkTitle"></h3></a>
+                <h4><perch:content id="speaker"></h4>
+            </div>
+        </div>
+    </perch:repeater>
+</div>

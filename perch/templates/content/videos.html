@@ -1,19 +1,23 @@
-<perch:block type="talks" label="Talks">
-	<div class="c-videos c-videos--large restrict">
-        <perch:repeater id="talkContainer" label="Talk Container">
-            <perch:showall>
-                <perch:if id="slug" value={videoSlug}>
-                    <div class="c-talk">
-                        <div style="display: none" class="c-talk__URL" data-url="<perch:content id="videoURL" label="Video URL" type="text">" data-slug="<perch:content id="slug" label="Unique Slug" type="text" suppress>"></div>
-                        <div class="c-talk__details">
-                            <a><h3><perch:content id="talkTitle" label="Talk Title" type="text"></h3></a>
-                            <h4><perch:content id="speaker" label="Speaker" type="text"></h4>
-                            <div>
-                                <perch:content id="abstract" label="Abstract" type="textarea" editor="redactor" html>
+<perch:blocks>
+    <perch:block type="talks" label="Talks">
+        <div class="c-videos c-videos--large restrict">
+            <perch:repeater id="talkContainer" label="Talk Container">
+                <perch:showall>
+                    <perch:if id="slug" value={videoSlug}>
+                        <div class="c-talk">
+                            <div style="display: none" class="c-talk__URL" data-url="<perch:content id="videoURL" label="Video URL" type="text">" data-slug="<perch:content id="slug" label="Unique Slug" type="text" suppress>"></div>
+                            <div class="c-talk__details">
+                                <a><h3><perch:content id="talkTitle" label="Talk Title" type="text"></h3></a>
+                                <h4><perch:content id="speaker" label="Speaker" type="text"></h4>
+                                <div>
+                                    <perch:content id="abstract" label="Abstract" type="textarea" editor="redactor" html>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </perch:if>
-        </perch:repeater>
-    </div>
-</perch:block>
+                    </perch:if>
+            </perch:repeater>
+        </div>
+    </perch:block>
+
+    <perch:template path="content/video_supplementary_blocks">
+</perch:blocks>
