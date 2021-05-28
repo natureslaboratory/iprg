@@ -3001,7 +3001,7 @@ var Video = /** @class */ (function () {
                         if (!(this.domain == "vimeo.com")) return [3 /*break*/, 2];
                         urlSpl = this.url.split("/");
                         id = urlSpl[urlSpl.length - 1];
-                        return [4 /*yield*/, axios_1.default.get("http://vimeo.com/api/v2/video/" + id + ".json")];
+                        return [4 /*yield*/, axios_1.default.get("https://vimeo.com/api/v2/video/" + id + ".json")];
                     case 1:
                         details = _a.sent();
                         this.videoDetails.thumbnail = details.data[0].thumbnail_large;

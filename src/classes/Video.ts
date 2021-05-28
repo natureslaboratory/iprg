@@ -142,7 +142,7 @@ export default class Video {
         if (this.domain == "vimeo.com") {
             let urlSpl = this.url.split("/");
             let id = urlSpl[urlSpl.length-1];
-            let details = await axios.get(`http://vimeo.com/api/v2/video/${id}.json`);
+            let details = await axios.get(`https://vimeo.com/api/v2/video/${id}.json`);
             this.videoDetails.thumbnail = details.data[0].thumbnail_large;
             this.videoDetails.height = details.data.height;
             this.videoDetails.width = details.data.width;
